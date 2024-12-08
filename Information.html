@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Information</title>
+    <!-- Include Bootstrap CSS for modal styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Information.css">
+</head>
+
+<body>
+    <!-- Button to toggle sidebar visibility -->
+    <button class="sidebar-toggle-btn" onclick="toggleSidebar()">
+        <i id="toggle-icon" class="fas fa-bars"></i>
+    </button>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const toggleIcon = document.getElementById('toggle-icon');
+
+            // Toggle the sidebar visibility
+            sidebar.classList.toggle('open');
+
+            // Dynamically change the icon
+            if (sidebar.classList.contains('open')) {
+                toggleIcon.classList.remove('fa-bars');
+                toggleIcon.classList.add('fa-times'); // Change to close icon
+            } else {
+                toggleIcon.classList.remove('fa-times');
+                toggleIcon.classList.add('fa-bars'); // Change back to menu icon
+            }
+        }
+
+    </script>
+    <div class="sidebar">
+        <h3>Welcome to My Information</h3>
+        <ul>
+            <li onclick="showInfo('grade8')"><i class="fas fa-file-alt"></i> Grade 8 Ministry Exam Results</li>
+            <li onclick="showInfo('grade10')"><i class="fas fa-file-alt"></i> Grade 10 Maric Exam Results</li>
+            <li onclick="showInfo('grade12')"><i class="fas fa-file-alt"></i> Grade 12 Class Report</li>
+            <li onclick="showInfo('entrance')"><i class="fas fa-file-alt"></i> Grade 12 Entrance Exam Results</li>
+            <li onclick="showInfo('gpa')"><i class="fas fa-file-alt"></i> Current GPA from MTU</li>
+            <li onclick="showInfo('allInfo')"><i class="fas fa-file-alt"></i> All Available Information</li>
+        </ul>
+    </div>
+
+    <div class="content-area">
+        <!-- Default content -->
+        <div class="default-page">
+            <h3>Select an Option from the Sidebar</h3>
+            <form action="" method="post">
+                <!-- Radio buttons for individual or organization -->
+                <div class="mb-3">
+                    <label for="" class="form-label">Are You Individual or Organization?</label><br>
+
+                    <label for="individual" class="form-label">Individual</label>
+                    <input type="radio" id="individual" name="cust_type" value="individual">
+
+                    <label for="organization" class="form-label">Organization</label>
+                    <input type="radio" id="organization" name="cust_type" value="organization">
+                </div>
+
+                <!-- Name input field -->
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+
+                <!-- Submit and Clear buttons -->
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-secondary">Clear</button>
+                </div>
+            </form>
+        </div>
+
+
+        <!-- Information Content -->
+        <div class="image-container">
+            <div class="grade8 hidden">
+                <img src="image8.png" alt="Grade 8 Ministry Exam Results">
+            </div>
+            <div class="grade10 hidden">
+                <img src="image10.png" alt="Grade 10 Maric Exam Results">
+            </div>
+            <div class="grade12 hidden">
+                <img src="image12.png" alt="Grade 12 Class Report">
+            </div>
+            <div class="entrance hidden">
+                <img src="entranceExam.png" alt="Grade 12 Entrance Exam Results">
+            </div>
+            <div class="gpa hidden">
+                <img src="gpa.png" alt="Current GPA from MTU">
+            </div>
+            <div class="allInfo hidden">
+                <img src="allInfo.png" alt="All Available Information">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Authorization -->
+    <div class="modal fade" id="backgroundModal" tabindex="-1" aria-labelledby="backgroundModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="backgroundModalLabel">Background Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="authorizationForm">
+                        <h5 class="text-center mb-4">Tell me Your Name, I will Authorize you</h5>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3 d-flex justify-content-between">
+                            <button type="submit" class="btn btn-primary" style="width: 45%;">Submit</button>
+                            <button type="reset" class="btn btn-secondary" style="width: 45%;">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS for modal functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Handle form submission
+        document.getElementById('authorizationForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            const userName = document.getElementById('name').value;
+            alert('Authorization request sent for ' + userName);
+        });
+
+        // Function to show information based on the clicked list item
+        function showInfo(infoType) {
+            // Hide all information divs first
+            const allDivs = document.querySelectorAll('.grade8, .grade10, .grade12, .entrance, .gpa, .allInfo, .default-page');
+            allDivs.forEach(div => div.classList.add('hidden'));
+
+            // If "All Available Information" is clicked, show all divs
+            if (infoType === 'allInfo') {
+                allDivs.forEach(div => div.classList.remove('hidden'));
+            } else {
+                // Show the selected div
+                const selectedDiv = document.querySelector(`.${infoType}`);
+                if (selectedDiv) {
+                    selectedDiv.classList.remove('hidden');
+                }
+            }
+        }
+
+        // Function to toggle sidebar visibility
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Birehanu Kassa | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
