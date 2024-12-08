@@ -7,560 +7,279 @@
     <title>Birehanu Kassa | Software Engineer</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Include FontAwesome CDN in your <head> -->
-    <!-- Include FontAwesome CDN in your <head> -->
+    <!-- FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
-    <title>My Portfolio</title>
-    
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Times New Roman', Times, serif;
-        }
-
-        .navbar {
-            height: 100px;
-        }
-
-        .nav-item {
-            font-size: large;
-            border-radius: 5%;
-        }
-
-        .nav-item:hover {
-            font-size: larger;
-            border-bottom: black solid 2px;
-        }
-
-        .hero {
-            background: url('https://wallpaperaccess.com/full/3239480.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
-            padding: 100px 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-            white-space: nowrap; /* Prevent text wrapping */
-            overflow: hidden; /* Prevents text overflow */
-            text-overflow: ellipsis; /* Adds an ellipsis ("...") if text overflows */
-        }
-
-        .hero p.lead {
-            font-size: 1.25rem;
-        }
-
-        .hero .btn-primary {
-            font-size: 1.25rem;
-            padding: 0.75rem 1.5rem;
-        }
-
-        .hero img {
-            max-height: 300px;
-            object-fit: cover;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 767px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero img {
-                width: 80%;
-                margin-top: 20px;
-            }
-
-            .hero .text-md-end {
-                text-align: center;
-            }
-        }
-
-        .services-icon {
-            font-size: 2rem;
-            color: #007bff;
-        }
-
-    </style>
+    <!-- AOS Library (Animate on Scroll) -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Style.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100 bg-light">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<body class="d-flex flex-column min-vh-100 bg-dark">
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Birehanu Kassa</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-dark" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Recent Work</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+       <!-- Hero Section -->
+    <section class="hero text-center text-md-start py-5" data-aos="fade-up">
         <div class="container">
-            <a class="navbar-brand" href="#">Birehanu Kassa</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item mx-2">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="#portfolio" style="color: white !important;">Recent Work</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="#about" style="color: white !important;">About Me</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="#services" style="color: white !important;">Services</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="#contact" style="color: white !important;">Contact Me</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="tel:+25197828062">
-                            <i class="bi bi-telephone-fill" style="color: #4f05da; font-size:large;"></i>
-                            <span>+251 9782 8062</span>
-                        </a>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-4">Hi, I'm Birehanu Kassa.</h1>
+                    <p class="lead">Software developer specializing in creating innovative web applications and digital experiences.</p>
+                    <a href="#portfolio" class="btn btn-primary btn-lg">Explore My Work</a>
+                </div>
+                <div class="col-md-6 text-center" data-aos="zoom-in">
+                    <img src="my_photo.jpg" alt="Birehanu Kassa" class="img-fluid rounded-circle shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-5 bg-light" data-aos="zoom-in" style="background-image: url('.png');">
+\
+            <div class="container">
+                <h2 class="text-center mb-4 text-primary">About Me</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-md-7">
+                        <h3>Experiences</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="web-dev-icon fas fa-laptop-code"></i> web development</li>
+                            <li><i class="desktop-app-icon fas fa-desktop"></i> Desktop application development</li>
+                            <li><i class="android-app-icon fas fa-mobile-alt"></i> Android app development</li>
+                            <li><i class="front-end-icon fas fa-code"></i> Front-end development</li>
+                            <li><i class="back-end-icon  fas fa-server"></i> Back-end development</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-5">
+                        <h3>Skills</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="html-icon fab fa-html5"></i> HTML</li>
+                            <li><i class="css-icon fab fa-css3-alt"></i> CSS</li>
+                            <li><i class="js-icon fab fa-js"></i> JavaScript</li>
+                            <li><i class="react-icon fab fa-react"></i> React</li>
+                            <li><i class="bootstrap-icon fab fa-bootstrap"></i> Bootstrap</li>
+                            <li><i class="php-icon fab fa-php"></i> PHP</li>
+                            <li><i class="java-icon fab fa-java"></i> Java</li>
+                            <li><i class="python-icon fab fa-python"></i> Python</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-5" data-aos="zoom-in" style="background-image: url('image2.png');">
+            <div class="container">
+                <h2 class="text-center mb-4 text-primary">Portfolio</h2>
+                <hr>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="https://www.bing.com/th?id=OADD2.7696634806419_1AZ7URY9E4IOPAGIMH&pid=21.2&c=16&roil=0&roit=0.1083&roir=1&roib=0.8933&w=472&h=247&rs=2&qlt=100"
+                                class="card-img" alt="Hotel Management System">
+                            <div class="card-body">
+                                <h5 class="card-title">Hotel Management System</h5>
+                                <p class="card-text">Streamlined hotel reservations and bookings.</p>
+                                <a href="#contact" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="https://th.bing.com/th/id/OIP.ZMt2mYkmntN29y1l8GzHCwHaHZ?rs=1&pid=ImgDetMain"
+                                class="card-img" alt="School Management System">
+                            <div class="card-body">
+                                <h5 class="card-title">School Management System</h5>
+                                <p class="card-text">Integrated platform for educators and parents.</p>
+                                <a href="#contact" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="https://th.bing.com/th/id/R.8db2699d1268723cacf2479d3eb36a26?rik=cYr4guzrAq5P%2bQ&riu=http%3a%2f%2fwww.bizzcom.com%2fimages%2fhms-content-pic.png&ehk=Ih44aRZ8s1Z7R9jTNPFNFQnjA22fO0nwHfKRUd8qskg%3d&risl=&pid=ImgRaw&r=0"
+                                class="card-img" alt="Hospital Management System">
+                            <div class="card-body">
+                                <h5 class="card-title">Hospital Management System</h5>
+                                <p class="card-text">Efficient management of patient records and inventory.</p>
+                                <a href="#contact" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-5 bg-light" data-aos="zoom-in">
+            <div class="container">
+                <h2 class="text-center mb-4 text-primary">Services</h2>
+                <hr>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Web Development</h3>
+                        <p>Creating dynamic, responsive websites.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-desktop"></i>
+                        <h3>Desktop App Development</h3>
+                        <p>Custom software solutions for businesses.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Android App Development</h3>
+                        <p>Engaging mobile apps for Android.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Contact Section -->
+<section id="contact" class="py-5" data-aos="zoom-in">
+    <div class="container">
+        <h2 class="text-center mb-4 text-primary">Contact Me</h2>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="contact-list list-unstyled">
+                    <li><i class="fas fa-mobile-alt"></i> <a href="tel:+251917828062">+251917828062</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:birekassa17828062@gmail.com">birekassa17828062@gmail.com</a></li>
+                    <li><i class="fab fa-telegram"></i> <a href="https://t.me/birekassa">@birekassa</a></li>
+                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/25193567890">+251917828062</a></li>
+
+                    <!-- Trigger button for the modal -->
+                    <li>
+                        <i class="fas fa-info-circle"></i>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#backgroundModal">My Background Info</a>
                     </li>
                 </ul>
             </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero text-center text-md-start">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <!-- Text Content -->
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <h1 class="display-3 mb-4">Hi, I'm Birehanu Kassa.</h1>
-                    <p class="lead mb-4">
-                        I am a software developer with a passion for creating innovative web
-                        applications and digital experiences. My expertise includes front-end and back-end development,
-                        with a strong focus on performance, usability, and scalability.
-                    </p>
-                    <a href="#portfolio" class="btn btn-primary btn-lg">Explore My Work</a>
-                </div>
-                <!-- Image -->
-                <div class="col-md-6 text-center text-md-end">
-                    <img class="img-fluid rounded-circle shadow-lg" src="my_photo.jpg" alt="Birehanu Kassa">
-                </div>
-            </div>
-        </div>
-    </section>
-
-   
-
-
-   <!-- About Section -->
-<section id="about" style="padding: 3rem 1.5rem; background-color: #f9f9f9;">
-    <div class="container">
-        <h2 class="text-center mb-4" style="color: #e40d78; font-size: 2.5rem; font-weight: bold;">About Me</h2>
-        <div class="row g-4">
-            <!-- Experiences Column -->
-            <div class="col-md-7 d-flex flex-column align-items-start">
-                <p class="text-left"
-                    style="font-size: 1.8rem; font-weight: bold; color: #333; margin-bottom: 1.5rem;">Experiences
-                </p>
-                <div class="text-left icons-container">
-                    <div class="experience-item">
-                        <p>
-                            <i class="fas fa-laptop-code experiences-icon web-dev-icon" aria-label="Web Development"></i>
-                            Developing dynamic and responsive websites for over 3 years
-                        </p>
+            <!-- Contact form section (feedback form) -->
+            <div class="col-md-6" data-aos="flip-left">
+                <form id="contactForm">
+                    <h3>I Value Your Feedback <i class="bi bi-emoji-smile"></i></h3> <!-- Smiley icon using Bootstrap Icons -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" id="email" class="form-control" required>
                     </div>
-                    <div class="experience-item">
-                        <p>
-                            <i class="fas fa-desktop experiences-icon desktop-app-icon" aria-label="Desktop App"></i>
-                            Crafting efficient desktop applications focused on user experience for 1 year
-                        </p>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" rows="4" class="form-control" required></textarea>
                     </div>
-                    <div class="experience-item">
-                        <p>
-                            <i class="fas fa-mobile-alt experiences-icon android-app-icon" aria-label="Android App"></i>
-                            Building engaging Android apps from concept to deployment for 2 years
-                        </p>
+                    <div class="mb-3 d-flex justify-content-between">
+                        <button type="submit" class="btn btn-primary" style="width: 45%;">Send</button>
+                        <button type="reset" class="btn btn-secondary" style="width: 45%;">Clear</button>
                     </div>
-                    <div class="experience-item">
-                        <p>
-                            <i class="fas fa-code experiences-icon front-end-icon" aria-label="Front-End Development"></i>
-                            Creating seamless user interfaces with front-end technologies for 2 years
-                        </p>
-                    </div>
-                    <div class="experience-item">
-                        <p>
-                            <i class="fas fa-server experiences-icon back-end-icon" aria-label="Back-End Development"></i>
-                            Designing robust back-end solutions for high-performance web apps for 3 years
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skills Column -->
-            <div class="col-md-5 d-flex flex-column align-items-start">
-                <p class="text-left"
-                    style="font-size: 1.8rem; font-weight: bold; color: #333; margin-bottom: 1.5rem;">Skills</p>
-                <div class="text-left icons-container">
-                    <div class="skill-item">
-                        <i class="fab fa-html5 skills-icon html-icon" title="HTML" aria-label="HTML"></i>
-                        <span>Mastering the art of <strong>HTML</strong> for clean and semantic web structures</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-css3-alt skills-icon css-icon" title="CSS" aria-label="CSS"></i>
-                        <span>Crafting beautiful and responsive designs with <strong>CSS</strong></span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-js skills-icon js-icon" title="JavaScript" aria-label="JavaScript"></i>
-                        <span>Bringing interactivity to life using <strong>JavaScript</strong></span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-react skills-icon react-icon" title="React" aria-label="React"></i>
-                        <span>Building scalable user interfaces with <strong>React</strong></span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-bootstrap skills-icon bootstrap-icon" title="Bootstrap" aria-label="Bootstrap"></i>
-                        <span>Accelerating development using <strong>Bootstrap</strong> for a mobile-first approach</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-php skills-icon php-icon" title="PHP" aria-label="PHP"></i>
-                        <span>Developing dynamic back-end logic with <strong>PHP</strong></span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-java skills-icon java-icon" title="Java" aria-label="Java"></i>
-                        <span>Creating cross-platform solutions with <strong>Java</strong></span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-python skills-icon python-icon" title="Python" aria-label="Python"></i>
-                        <span>Writing efficient and scalable code in <strong>Python</strong></span>
-                    </div>
+                </form>
+                <!-- Placeholder for success message -->
+                <div id="successMessage" class="text-center text-success" style="display: none;">
+                    <h4>I'm a hero!</h4>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<style>
-    .experiences-icon {
-        font-size: 2rem;
-        /* Adjust size as needed */
-        margin-right: 10px;
-        vertical-align: middle;
-        /* Align icon with text */
-        color: #555;
-        /* Default color */
-    }
-
-    /* Specific Icon Colors */
-    .web-dev-icon {
-        color: #4CAF50;
-        /* Green for Web Development */
-    }
-
-    .desktop-app-icon {
-        color: #9E9E9E;
-        /* Gray for Desktop App */
-    }
-
-    .android-app-icon {
-        color: #A4C639;
-        /* Green for Android */
-    }
-
-    .front-end-icon {
-        color: #61DAFB;
-        /* React blue for Front-End */
-    }
-
-    .back-end-icon {
-        color: #FF5722;
-        /* Deep Orange for Back-End */
-    }
-
-    /* Hover Effects */
-    .experiences-icon:hover {
-        color: #ff4081;
-        /* Change color on hover */
-        transform: scale(1.1);
-        /* Slightly enlarge icon on hover */
-    }
-
-    /* General Styles */
-    .icons-container {
-        font-size: 1rem;
-        color: #555;
-    }
-
-    .experience-item,
-    .skill-item {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 16px;
-        line-height: 1.5;
-    }
-
-    .experience-detail p,
-    .skill-item span {
-        font-size: 1.1rem;
-        line-height: 1.5;
-        color: #333;
-    }
-
-    .experiences-icon,
-    .skills-icon {
-        font-size: 2rem;
-        /* Set base size for icons */
-        margin-right: 10px;
-        flex-shrink: 0;
-        /* Prevent icons from shrinking */
-        height: auto;
-        /* Ensures the icon scales with the text */
-    }
-
-    /* Original Colors for Icons */
-    .html-icon {
-        color: #E34F26;
-    }
-
-    .css-icon {
-        color: #1572B6;
-    }
-
-    .js-icon {
-        color: #F7DF1E;
-    }
-
-    .react-icon {
-        color: #61DAFB;
-    }
-
-    .bootstrap-icon {
-        color: #7952B3;
-    }
-
-    .php-icon {
-        color: #777BB4;
-    }
-
-    .java-icon {
-        color: #007396;
-    }
-
-    .python-icon {
-        color: #3776AB;
-    }
-
-    /* Hover Effects */
-    .skills-icon:hover,
-    .experiences-icon:hover {
-        transform: scale(1.2);
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-        .icons-container {
-            font-size: 0.9rem;
-        }
-
-        .skills-icon,
-        .experiences-icon {
-            font-size: 1.6rem;
-        }
-    }
-
-    @media (max-width: 576px) {
-        .experience-detail p,
-        .skills-icon {
-            font-size: 1rem;
-        }
-
-        #about h2 {
-            font-size: 2rem;
-        }
-    }
-</style>
-
-
-
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="bg-light p-5">
-        <div class="container">
-            <h2 class="text-center mb-4" style="color: #e40d78;">Portfolio</h2>
-            <div class="row g-4">
-                <!-- Project 1 -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-img-container">
-                            <img src="https://www.bing.com/th?id=OADD2.7696634806419_1AZ7URY9E4IOPAGIMH&pid=21.2&c=16&roil=0&roit=0.1083&roir=1&roib=0.8933&w=472&h=247&rs=2&qlt=100"
-                                class="card-img" alt="Hotel Management System">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Hotel Management System</h5>
-                            <p class="card-text flex-grow-1">
-                                A comprehensive system for managing hotel reservations, bookings, and customer service.
-                                Designed to streamline operations and improve guest experience.
-                            </p>
-                            <a href="#contact" class="btn btn-primary mt-3">For More Details Contact me </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-img-container">
-                            <img src="https://th.bing.com/th/id/OIP.ZMt2mYkmntN29y1l8GzHCwHaHZ?rs=1&pid=ImgDetMain"
-                                class="card-img" alt="School Management System">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">School Management System</h5>
-                            <p class="card-text flex-grow-1">
-                                An integrated platform for managing student information, grades, attendance, and
-                                communication between parents and educators.
-                            </p>
-                            <a href="#contact" class="btn btn-primary mt-3">For More Details Contact me </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-img-container">
-                            <img src="https://th.bing.com/th/id/R.8db2699d1268723cacf2479d3eb36a26?rik=cYr4guzrAq5P%2bQ&riu=http%3a%2f%2fwww.bizzcom.com%2fimages%2fhms-content-pic.png&ehk=Ih44aRZ8s1Z7R9jTNPFNFQnjA22fO0nwHfKRUd8qskg%3d&risl=&pid=ImgRaw&r=0"
-                                class="card-img" alt="Hospital Management System">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Hospital Management System</h5>
-                            <p class="card-text flex-grow-1">
-                                A robust system designed to manage patient records, appointments, billing, and medical
-                                inventory. Aims to enhance hospital efficiency and patient care.
-                            </p>
-                            <a href="#contact" class="btn btn-primary mt-3">For More Details Contact me </a>
-                        </div>
-                    </div>
-                </div>
+<!-- Modal -->
+<div class="modal fade" id="backgroundModal" tabindex="-1" aria-labelledby="backgroundModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="backgroundModalLabel">Background Information</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-        </div>
-    </section>
-
-   <!-- Services Section -->
-<section class="p-5 bg-light" id="services">
-    <div class="container">
-        <h2 class="text-center mb-4" style="color: #e40d78; font-size: 2.5rem; font-weight: bold;">Our Services</h2>
-        <div class="row text-center">
-            <!-- Service 1 -->
-            <div class="col-md-4 mb-4">
-                <i class="bi bi-laptop-fill services-icon" style="font-size: 3rem; color: #4CAF50;"></i>
-                <h3 class="mt-2" style="font-size: 1.8rem; font-weight: bold;">Web Development</h3>
-                <p style="font-size: 1rem; color: #555;">
-                    Building responsive and dynamic websites to enhance your online presence.
-                </p>
-            </div>
-            <!-- Service 2 -->
-            <div class="col-md-4 mb-4">
-                <i class="bi bi-app-indicator services-icon" style="font-size: 3rem; color: #2196F3;"></i>
-                <h3 class="mt-2" style="font-size: 1.8rem; font-weight: bold;">Desktop App Development</h3>
-                <p style="font-size: 1rem; color: #555;">
-                    Crafting user-friendly interfaces with a focus on excellent user experience.
-                </p>
-            </div>
-            <!-- Service 3 -->
-            <div class="col-md-4 mb-4">
-                <i class="bi bi-phone-fill services-icon" style="font-size: 3rem; color: #FFC107;"></i>
-                <h3 class="mt-2" style="font-size: 1.8rem; font-weight: bold;">Android App Development</h3>
-                <p style="font-size: 1rem; color: #555;">
-                    Building engaging Android apps from concept to deployment.
-                </p>
+            <div class="modal-body">
+                <form action="">
+                    <h5>Tell me Your Name, I will Authorize you</h5>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3 d-flex justify-content-between">
+                        <button type="submit" class="btn btn-primary" style="width: 45%;">Submit</button>
+                        <button type="reset" class="btn btn-secondary" style="width: 45%;">Clear</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</section>
+</div>
 
-   <!-- Contact Section -->
-<section id="contact" class="p-5">
-    <div class="container" style="background-color: #f5f5f5; padding: 30px; border-radius: 8px;">
-        <h2 class="text-center mb-4" style="color: #e40d78; font-size: 2.8rem; font-weight: bold;">Contact Me</h2>
-        <div class="row g-4">
-            <!-- Contact Information Column -->
-            <div class="col-md-6 d-flex justify-content-center align-items-start">
-                <div class="contact-info text-center" style="font-size: 1.4rem; color: #333;">
-                    <div class="contact-item d-flex align-items-center mb-3">
-                        <a href="tel:+25197828062" style="text-decoration: none; color: #333; display: flex; align-items: center;">
-                            <i class="bi bi-telephone-fill" style="color: #4CAF50; font-size: 2.5rem; margin-right: 15px;"></i>
-                            <span>+251 9782 8062</span>
-                        </a>
-                    </div>
-                    <div class="contact-item d-flex align-items-center mb-3">
-                        <a href="mailto:birekassa17828062@gmail.com" style="text-decoration: none; color: #333; display: flex; align-items: center;">
-                            <i class="bi bi-envelope-fill" style="color: #FF5722; font-size: 2.5rem; margin-right: 15px;"></i>
-                            <span>birekassa17828062@gmail.com</span>
-                        </a>
-                    </div>
-                    <div class="contact-item d-flex align-items-center mb-3">
-                        <a href="https://t.me/birekassa" target="_blank" style="text-decoration: none; color: #333; display: flex; align-items: center;">
-                            <i class="bi bi-telegram" style="color: #0088cc; font-size: 2.5rem; margin-right: 15px;"></i>
-                            <span>@birekassa</span>
-                        </a>
-                    </div>
-                    <div class="contact-item d-flex align-items-center mb-3">
-                        <a href="https://wa.me/25193567890" target="_blank" style="text-decoration: none; color: #333; display: flex; align-items: center;">
-                            <i class="bi bi-whatsapp" style="color: #25D366; font-size: 2.5rem; margin-right: 15px;"></i>
-                            <span>+251 9356 7890</span>
-                        </a>
-                    </div>
-                    <div class="contact-item d-flex align-items-center mb-3">
-                        <a href="sms:+25192567890" style="text-decoration: none; color: #333; display: flex; align-items: center;">
-                            <i class="bi bi-chat-dots" style="color: #0d6efd; font-size: 2.5rem; margin-right: 15px;"></i>
-                            <span>+251 9256 7890</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Contact Form Column -->
-            <div class="col-md-6">
-                <div class="contact-form" style="padding: 30px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                    <form action="send_message.php">
-                        <div class="row g-3 mb-3">
-                            <div class="col-md-6">
-                                <label for="name" class="form-label" style="font-size: 1.1rem;">Name:</label>
-                                <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required style="font-size: 1.1rem;">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="email" class="form-label" style="font-size: 1.1rem;">Email:</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="example@gmail.com" required style="font-size: 1.1rem;">
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label" style="font-size: 1.1rem;">Message:</label>
-                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Your Message" required style="font-size: 1.1rem;"></textarea>
-                        </div>
-                        <div class="d-flex justify-content-center gap-3">
-                            <button type="submit" class="btn btn-primary" style="width: 45%; font-size: 1.2rem;">Send Message</button>
-                            <button type="reset" class="btn btn-secondary" style="width: 45%; font-size: 1.2rem;">Clear</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- Add JavaScript for handling the form submission -->
+<script>
+    // JavaScript to handle form submission
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form from submitting normally
+        document.getElementById("successMessage").style.display = "block"; // Show success message
+        document.getElementById("contactForm").reset(); // Reset the form
+    });
+</script>
 
 
-    <footer style="text-align: center; padding: 1rem; background-color: #333; color: white; font-weight: bold;">
-        <p>&copy; 2024 All Rights Reserved</p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 bg-dark text-white">
+        <p>&copy; 2024 Birehanu Kassa. All rights reserved.</p>
     </footer>
 
-
-
-
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1200,
+            easing: 'ease',
+            once: true,
+        });
+
+        // Get current hour of the day
+        const currentHour = new Date().getHours();
+
+        // Apply animations based on time of day
+        const heroSection = document.querySelector('.hero');
+
+        if (currentHour >= 6 && currentHour < 12) {
+            heroSection.setAttribute('data-aos', 'fade-up'); // Morning: fade-up
+        } else if (currentHour >= 12 && currentHour < 18) {
+            heroSection.setAttribute('data-aos', 'zoom-in'); // Afternoon: zoom-in
+        } else if (currentHour >= 18 && currentHour < 22) {
+            heroSection.setAttribute('data-aos', 'flip-left'); // Evening: flip-left
+        } else {
+            heroSection.setAttribute('data-aos', 'fade-down'); // Night: fade-down
+        }
+
+        // Trigger AOS refresh after setting new attributes
+        AOS.refresh();
+    </script>
 </body>
+
 </html>
