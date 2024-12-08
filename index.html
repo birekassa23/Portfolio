@@ -40,27 +40,28 @@
 
     <!-- Hero Section -->
     <main>
-       <!-- Hero Section -->
-    <section class="hero text-center text-md-start py-5" data-aos="fade-up">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h1 class="display-4">Hi, I'm Birehanu Kassa.</h1>
-                    <p class="lead">Software developer specializing in creating innovative web applications and digital experiences.</p>
-                    <a href="#portfolio" class="btn btn-primary btn-lg">Explore My Work</a>
-                </div>
-                <div class="col-md-6 text-center" data-aos="zoom-in">
-                    <img src="my_photo.jpg" alt="Birehanu Kassa" class="img-fluid rounded-circle shadow-lg">
+        <!-- Hero Section -->
+        <section class="hero text-center text-md-start py-5" data-aos="fade-up">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h1 class="display-4">Hi, I'm Birehanu Kassa.</h1>
+                        <p class="lead">Software developer specializing in creating innovative web applications and
+                            digital experiences.</p>
+                        <a href="#portfolio" class="btn btn-primary btn-lg">Explore My Work</a>
+                    </div>
+                    <div class="col-md-6 text-center" data-aos="zoom-in">
+                        <img src="my_photo.jpg" alt="Birehanu Kassa" class="img-fluid rounded-circle shadow-lg">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
         <!-- About Section -->
         <section id="about" class="py-5 bg-light" data-aos="zoom-in" style="background-image: url('.png');">
-\
+            \
             <div class="container">
-                <h2 class="text-center mb-4 text-primary">About Me</h2>
+                <h2 class="text-center color  mb-4 text-primary">About Me</h2>
                 <hr>
                 <div class="row">
                     <div class="col-md-7">
@@ -159,87 +160,92 @@
             </div>
         </section>
 
-    <!-- Contact Section -->
-<section id="contact" class="py-5" data-aos="zoom-in">
-    <div class="container">
-        <h2 class="text-center mb-4 text-primary">Contact Me</h2>
-        <hr>
-        <div class="row">
-            <div class="col-md-6">
-                <ul class="contact-list list-unstyled">
-                    <li><i class="fas fa-mobile-alt"></i> <a href="tel:+251917828062">+251917828062</a></li>
-                    <li><i class="fas fa-envelope"></i> <a href="mailto:birekassa17828062@gmail.com">birekassa17828062@gmail.com</a></li>
-                    <li><i class="fab fa-telegram"></i> <a href="https://t.me/birekassa">@birekassa</a></li>
-                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/25193567890">+251917828062</a></li>
+        <!-- Contact Section -->
+        <section id="contact" class="py-5" data-aos="zoom-in">
+            <div class="container">
+                <h2 class="text-center mb-4 text-primary">Contact Me</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="contact-list list-unstyled">
+                            <li><i class="fas fa-mobile-alt"></i> <a href="tel:+251917828062">+251917828062</a></li>
+                            <li><i class="fas fa-envelope"></i> <a
+                                    href="mailto:birekassa17828062@gmail.com">birekassa17828062@gmail.com</a></li>
+                            <li><i class="fab fa-telegram"></i> <a href="https://t.me/birekassa">@birekassa</a></li>
+                            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/25193567890">+251917828062</a>
+                            </li>
 
-                    <!-- Trigger button for the modal -->
-                    <li>
-                        <i class="fas fa-info-circle"></i>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#backgroundModal">My Background Info</a>
-                    </li>
-                </ul>
+                            <!-- Trigger button for the modal -->
+                            <li>
+                                <i class="fas fa-info-circle"></i>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#backgroundModal">My Background
+                                    Info</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact form section (feedback form) -->
+                    <div class="col-md-6" data-aos="flip-left">
+                        <form id="contactForm">
+                            <h3>I Value Your Feedback <i class="bi bi-emoji-smile"></i></h3>
+                            <!-- Smiley icon using Bootstrap Icons -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" rows="4" class="form-control" required></textarea>
+                            </div>
+                            <div class="mb-3 d-flex justify-content-between">
+                                <button type="submit" class="btn btn-primary" style="width: 45%;">Send</button>
+                                <button type="reset" class="btn btn-secondary" style="width: 45%;">Clear</button>
+                            </div>
+                        </form>
+                        <!-- Placeholder for success message -->
+                        <div id="successMessage" class="text-center text-success" style="display: none;">
+                            <h4>I'm a hero!</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <!-- Contact form section (feedback form) -->
-            <div class="col-md-6" data-aos="flip-left">
-                <form id="contactForm">
-                    <h3>I Value Your Feedback <i class="bi bi-emoji-smile"></i></h3> <!-- Smiley icon using Bootstrap Icons -->
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Your Email</label>
-                        <input type="email" id="email" class="form-control" required>
+        <!-- Modal -->
+        <div class="modal fade" id="backgroundModal" tabindex="-1" aria-labelledby="backgroundModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="backgroundModalLabel">Background Information</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea id="message" rows="4" class="form-control" required></textarea>
+                    <div class="modal-body">
+                        <form action="">
+                            <h5>Tell me Your Name, I will Authorize you</h5>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3 d-flex justify-content-between">
+                                <button type="submit" class="btn btn-primary" style="width: 45%;">Submit</button>
+                                <button type="reset" class="btn btn-secondary" style="width: 45%;">Clear</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="mb-3 d-flex justify-content-between">
-                        <button type="submit" class="btn btn-primary" style="width: 45%;">Send</button>
-                        <button type="reset" class="btn btn-secondary" style="width: 45%;">Clear</button>
-                    </div>
-                </form>
-                <!-- Placeholder for success message -->
-                <div id="successMessage" class="text-center text-success" style="display: none;">
-                    <h4>I'm a hero!</h4>
                 </div>
             </div>
         </div>
-    </div>
-</section>
 
-<!-- Modal -->
-<div class="modal fade" id="backgroundModal" tabindex="-1" aria-labelledby="backgroundModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="backgroundModalLabel">Background Information</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form action="">
-                    <h5>Tell me Your Name, I will Authorize you</h5>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Your Name</label>
-                        <input type="text" class="form-control" id="name" required>
-                    </div>
-                    <div class="mb-3 d-flex justify-content-between">
-                        <button type="submit" class="btn btn-primary" style="width: 45%;">Submit</button>
-                        <button type="reset" class="btn btn-secondary" style="width: 45%;">Clear</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Add JavaScript for handling the form submission -->
-<script>
-    // JavaScript to handle form submission
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent form from submitting normally
-        document.getElementById("successMessage").style.display = "block"; // Show success message
-        document.getElementById("contactForm").reset(); // Reset the form
-    });
-</script>
+        <!-- Add JavaScript for handling the form submission -->
+        <script>
+            // JavaScript to handle form submission
+            document.getElementById("contactForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent form from submitting normally
+                document.getElementById("successMessage").style.display = "block"; // Show success message
+                document.getElementById("contactForm").reset(); // Reset the form
+            });
+        </script>
 
 
     </main>
