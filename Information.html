@@ -5,152 +5,258 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Information</title>
-    <!-- Include Bootstrap CSS for modal styling -->
+
+    <!-- Bootstrap and FontAwesome for styling -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Include Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="Information.css">
-</head>
 
-<body>
-    <!-- Button to toggle sidebar visibility -->
-    <button class="sidebar-toggle-btn" onclick="toggleSidebar()">
-        <i id="toggle-icon" class="fas fa-bars"></i>
-    </button>
+    <style>
+        /* General Styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: linear-gradient(45deg, #6211cb, #106ee9);
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            const toggleIcon = document.getElementById('toggle-icon');
+        .content-area {
+            margin-left: 260px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            height: calc(100vh - 140px);
+            transition: margin-left 0.3s ease;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+        }
 
-            // Toggle the sidebar visibility
-            sidebar.classList.toggle('open');
+        .content-area h3 {
+            text-align: center;
+            font-size: 2rem;
+            padding-bottom: 20px;
+            color: #333;
+            font-weight: bold;
+        }
 
-            // Dynamically change the icon
-            if (sidebar.classList.contains('open')) {
-                toggleIcon.classList.remove('fa-bars');
-                toggleIcon.classList.add('fa-times'); // Change to close icon
-            } else {
-                toggleIcon.classList.remove('fa-times');
-                toggleIcon.classList.add('fa-bars'); // Change back to menu icon
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #4b0082;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            z-index: 99;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            background-color: #4b0082;
+            margin-top: 30px;
+        }
+
+        .sidebar ul li {
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: white;
+            border-radius: 8px;
+            background-color: #333;
+            transition: background-color 0.3s, transform 0.3s ease-in-out;
+        }
+
+        .sidebar ul li:hover {
+            background-color: #007bff;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .sidebar-toggle-btn {
+            position: fixed;
+            top: 20px;
+            left: 10px;
+            background-color: #007bff;
+            border: none;
+            padding: 10px;
+            color: white;
+            font-size: 1.5rem;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Close button Styles */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #f51212;
+            background-color: #cccaca;
+            box-shadow: 0px 5px 1px black;
+        }
+
+        /* Modal Styles */
+        .modal-dialog {
+            max-width: 500px;
+        }
+
+        /* Fade-in animation */
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
             }
         }
 
-    </script>
+        /* Sidebar Animation */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                width: 70%;
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .sidebar-toggle-btn {
+                display: block;
+            }
+
+            .content-area {
+                margin-left: 0;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .close-btn {
+                display: none;
+            }
+        }
+
+        /* Image Container */
+        .image-container img {
+            width: 90%;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1rem;
+            color: #777;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #f8f9fa;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar and Toggle Button -->
+    <button class="sidebar-toggle-btn" onclick="toggleSidebar()" aria-label="Toggle Sidebar">
+        <i id="toggle-icon" class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+
     <div class="sidebar">
-        <h3>Welcome to My Information</h3>
+        <button class="close-btn" id="closeBtn" aria-label="Close Sidebar" onclick="closeSidebar()">✖</button>
+        <h3 style="background-color: #007bff; margin-top: 0;">Welcome to My Information</h3>
         <ul>
-            <li onclick="showInfo('grade8')"><i class="fas fa-file-alt"></i> Grade 8 Ministry Exam Results</li>
-            <li onclick="showInfo('grade10')"><i class="fas fa-file-alt"></i> Grade 10 Maric Exam Results</li>
-            <li onclick="showInfo('grade12')"><i class="fas fa-file-alt"></i> Grade 12 Class Report</li>
-            <li onclick="showInfo('entrance')"><i class="fas fa-file-alt"></i> Grade 12 Entrance Exam Results</li>
-            <li onclick="showInfo('gpa')"><i class="fas fa-file-alt"></i> Current GPA from MTU</li>
-            <li onclick="showInfo('allInfo')"><i class="fas fa-file-alt"></i> All Available Information</li>
+            <li onclick="showInfo('grade8')" aria-label="View Grade 8 Ministry Exam Results"><i class="fas fa-file-alt"></i> Grade 8 Ministry Exam Results</li>
+            <li onclick="showInfo('grade10')" aria-label="View Grade 10 Maric Exam Results"><i class="fas fa-file-alt"></i> Grade 10 Maric Exam Results</li>
+            <li onclick="showInfo('grade12')" aria-label="View Grade 12 Class Report"><i class="fas fa-file-alt"></i> Grade 12 Class Report</li>
+            <li onclick="showInfo('entrance')" aria-label="View Grade 12 Entrance Exam Results"><i class="fas fa-file-alt"></i> Grade 12 Entrance Exam Results</li>
+            <li onclick="showInfo('gpa')" aria-label="View Current GPA from MTU"><i class="fas fa-file-alt"></i> Current GPA from MTU</li>
+            <li onclick="showInfo('allInfo')" aria-label="View All Available Information"><i class="fas fa-file-alt"></i> All Available Information</li>
         </ul>
     </div>
 
+    <!-- Content Area -->
     <div class="content-area">
-        <!-- Default content -->
         <div class="default-page">
-            <h3>Select an Option from the Sidebar</h3>
-            <form action="" method="post">
-                <!-- Radio buttons for individual or organization -->
-                <div class="mb-3">
-                    <label for="" class="form-label">Are You Individual or Organization?</label><br>
-
-                    <label for="individual" class="form-label">Individual</label>
-                    <input type="radio" id="individual" name="cust_type" value="individual">
-
-                    <label for="organization" class="form-label">Organization</label>
-                    <input type="radio" id="organization" name="cust_type" value="organization">
-                </div>
-
-                <!-- Name input field -->
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" id="name" name="name" class="form-control" required>
-                </div>
-
-                <!-- Submit and Clear buttons -->
-                <div class="mb-3">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button type="reset" class="btn btn-secondary">Clear</button>
-                </div>
-            </form>
+            <!-- Default content can go here -->
         </div>
 
-
-        <!-- Information Content -->
         <div class="image-container">
-            <div class="grade8 hidden">
+            <div class="grade8 hidden fade-in">
+                <h3>Grade 8 Ministry Exam Results</h3>
                 <img src="image8.png" alt="Grade 8 Ministry Exam Results">
             </div>
-            <div class="grade10 hidden">
+            <div class="grade10 hidden fade-in">
+                <h3>Grade 10 Maric Exam Results</h3>
                 <img src="image10.png" alt="Grade 10 Maric Exam Results">
             </div>
-            <div class="grade12 hidden">
+            <div class="grade12 hidden fade-in">
+                <h3>Grade 12 Class Report</h3>
                 <img src="image12.png" alt="Grade 12 Class Report">
             </div>
-            <div class="entrance hidden">
+            <div class="entrance hidden fade-in">
+                <h3>Grade 12 Entrance Exam Results</h3>
                 <img src="entranceExam.png" alt="Grade 12 Entrance Exam Results">
             </div>
-            <div class="gpa hidden">
+            <div class="gpa hidden fade-in">
+                <h3>Current GPA from MTU</h3>
                 <img src="gpa.png" alt="Current GPA from MTU">
             </div>
-            <div class="allInfo hidden">
+            <div class="allInfo hidden fade-in">
+                <h3>All Available Information</h3>
                 <img src="allInfo.png" alt="All Available Information">
             </div>
         </div>
     </div>
 
-    <!-- Modal for Authorization -->
-    <div class="modal fade" id="backgroundModal" tabindex="-1" aria-labelledby="backgroundModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="backgroundModalLabel">Background Information</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="authorizationForm">
-                        <h5 class="text-center mb-4">Tell me Your Name, I will Authorize you</h5>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Your Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                        </div>
-                        <div class="mb-3 d-flex justify-content-between">
-                            <button type="submit" class="btn btn-primary" style="width: 45%;">Submit</button>
-                            <button type="reset" class="btn btn-secondary" style="width: 45%;">Clear</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Include Bootstrap JS for modal functionality -->
+    <!-- Bootstrap JS for modal functionality -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // Handle form submission
-        document.getElementById('authorizationForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the default form submission
-            const userName = document.getElementById('name').value;
-            alert('Authorization request sent for ' + userName);
-        });
-
-        // Function to show information based on the clicked list item
         function showInfo(infoType) {
-            // Hide all information divs first
             const allDivs = document.querySelectorAll('.grade8, .grade10, .grade12, .entrance, .gpa, .allInfo, .default-page');
             allDivs.forEach(div => div.classList.add('hidden'));
 
-            // If "All Available Information" is clicked, show all divs
             if (infoType === 'allInfo') {
                 allDivs.forEach(div => div.classList.remove('hidden'));
             } else {
-                // Show the selected div
                 const selectedDiv = document.querySelector(`.${infoType}`);
                 if (selectedDiv) {
                     selectedDiv.classList.remove('hidden');
@@ -158,17 +264,21 @@
             }
         }
 
-        // Function to toggle sidebar visibility
         function toggleSidebar() {
             const sidebar = document.querySelector('.sidebar');
             sidebar.classList.toggle('open');
+            document.querySelector('.content-area').classList.toggle('shifted');
+        }
+
+        function closeSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.remove('open');
+            document.querySelector('.content-area').classList.remove('shifted');
         }
     </script>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Birehanu Kassa | All Rights Reserved</p>
-    </footer>
+
+
 </body>
 
 </html>
