@@ -251,7 +251,7 @@ body {
 /* Anchor Tags */
 .contact-list a {
     text-decoration: none;
-    font-size: calc(1rem + 0.5vw); /* Dynamic font size */
+    font-size: calc(1rem + 0.2vw); /* Dynamic font size */
     color: #333; /* Default color */
     transition: color 0.3s ease;
 }
