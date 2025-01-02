@@ -14,12 +14,10 @@ body {
     height: 100px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
 }
-
 .navbar-collapse {
     z-index: 999;
     padding-left: 10%;
 }
-
 /* Navbar Links Styling */
 .navbar-nav .nav-item {
     font-size: 18px;
@@ -36,22 +34,11 @@ body {
     border-bottom: 2px solid #007bff; /* Add a blue border under active item */
 }
 
-/* Unvisited Links */
-.navbar-nav .nav-item .nav-link {
-    color: green; /* White color for unvisited links */
-    transition: color 0.3s, transform 0.3s; /* Smooth color and transform transition */
-}
+
 
 .navbar-nav .nav-item .nav-link:hover {
-    color: rgb(184, 180, 180); /* Blue color on hover */
+    color:white;
     transform: scale(1.1); /* Slight scaling effect for hover */
-    text-decoration: none;
-    border-bottom: 2px solid #007bff; /* Blue border on hover */
-}
-
-/* Visited Links */
-.navbar-nav .nav-item .nav-link:visited {
-    color: #7e5674; /* Light grey for visited links */
 }
 
 /* Navbar Toggler Animation */
