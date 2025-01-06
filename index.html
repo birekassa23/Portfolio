@@ -287,46 +287,60 @@
                         </ul>
                     </div>
 
-                    <!-- Contact form section (feedback form) -->
-                    <div class="col-md-6" data-aos="flip-left">
-                        <form id="contactForm">
-                            <h3>I Value Your Feedback <i class="bi bi-emoji-smile"></i></h3>
-                            <!-- Smiley icon using Bootstrap Icons -->
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Your Email</label>
-                                <input type="email" id="email" class="form-control" required>
+                    <section id="contact">
+                        <!-- Contact form section (feedback form) -->
+                        <div class="col-md-6" data-aos="flip-left">
+                            <form id="contactForm" onsubmit="sendEmail(); return false;">
+                                <h3>I Value Your Feedback <i class="bi bi-emoji-smile"></i></h3>
+                                <!-- Smiley icon using Bootstrap Icons -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Your Email</label>
+                                    <input type="email" id="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea id="message" rows="4" class="form-control" required></textarea>
+                                </div>
+                                <div class="mb-3 d-flex justify-content-between">
+                                    <button type="submit" class="btn btn-primary" style="width: 45%;">Send</button>
+                                    <button type="reset" class="btn btn-secondary" style="width: 45%;">Clear</button>
+                                </div>
+                            </form>
+                    
+                            <!-- Placeholder for success message -->
+                            <div id="successMessage" class="text-center text-success" style="display: none;">
+                                <h4>Message Sent Successfully!</h4>
                             </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea id="message" rows="4" class="form-control" required></textarea>
-                            </div>
-                            <div class="mb-3 d-flex justify-content-between">
-                                <button type="submit" class="btn btn-primary" style="width: 45%;">Send</button>
-                                <button type="reset" class="btn btn-secondary" style="width: 45%;">Clear</button>
-                            </div>
-                        </form>
-                        <!-- Placeholder for success message -->
-                        <div id="successMessage" class="text-center text-success" style="display: none;">
-                            <h4>Message Sent Successfully </h4>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-       
-
-        <!-- Add JavaScript for handling the form submission -->
-        <script>
-            // JavaScript to handle form submission
-            document.getElementById("contactForm").addEventListener("submit", function (event) {
-                event.preventDefault(); // Prevent form from submitting normally
-                document.getElementById("successMessage").style.display = "block"; // Show success message
-                document.getElementById("contactForm").reset(); // Reset the form
-            });
-        </script>
-
-
+                    </section>
+                    
+                    <!-- JavaScript Code -->
+                    <script>
+                        function sendEmail() {
+                            // Get form values
+                            const senderEmail = document.getElementById('email').value;
+                            const message = document.getElementById('message').value;
+                    
+                            // Email details
+                            const recipient = "birekassa17828062@gmail.com"; // Replace with your email
+                            const subject = "Feedback from " + senderEmail;
+                            const body = `Message: ${message}\n\nSender Email: ${senderEmail}`;
+                    
+                            // Construct the mailto link
+                            const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    
+                            // Open default email client
+                            window.location.href = mailtoLink;
+                    
+                            // Display success message only if email client opens
+                            setTimeout(() => {
+                                document.getElementById("successMessage").style.display = "block";
+                            }, 10); // Delay to simulate email opening
+                    
+                            // Clear form after showing success message
+                            document.getElementById("contactForm").reset();
+                        }
+                    </script>                
     </main>
 
     <!-- Footer -->
