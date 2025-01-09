@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Generic styling */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.container {
+  position: relative;
+}
+
+/* Hide slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Navigation buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  user-select: none;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: #3c4683;
+  color: white;
+  padding: 8px;
+}
+
+/* Thumbnail images container */
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.column {
+  flex: 0 0 auto;
+  width: 16.66%;
+}
+
+.column img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.6;
+}
+
+.column img:hover,
+.column img.active {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Ensure horizontal scroll for smaller devices */
+@media (max-width: 600px) {
+  .row {
+    gap: 5px;
+  }
+  .column {
+    width: 30%;
+  }
+}
+</style>
+<body>
+
+<h2 style="text-align:center">Show My Information</h2>
+
+<div class="container">
+  <!-- Slides -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 5</div>
+    <img src="image8.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 5</div>
+    <img src="image10.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 5</div>
+    <img src="image1.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 5</div>
+    <img src="image12.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 5</div>
+    <img src="image2.png" style="width:100%">
+  </div>
+
+  <!-- Navigation buttons -->
+  <a class="prev" onclick="plusSlides(-1)">?</a>
+  <a class="next" onclick="plusSlides(1)">?</a>
+
+  <!-- Caption -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnails -->
+  <div class="row">
+    <div class="column">
+      <img class="demo" src="image8.png" onclick="currentSlide(1)" alt="Grade 8 Ministry Exam Result">
+    </div>
+    <div class="column">
+      <img class="demo" src="image10.png" onclick="currentSlide(2)" alt="Grade 10 Matric Exam Result">
+    </div>
+    <div class="column">
+      <img class="demo" src="image1.png" onclick="currentSlide(3)" alt="Grade 12 Class Report">
+    </div>
+    <div class="column">
+      <img class="demo" src="image12.png" onclick="currentSlide(4)" alt="Grade 12 Entrance Exam Result">
+    </div>
+    <div class="column">
+      <img class="demo" src="image2.png" onclick="currentSlide(5)" alt="Current Cumulative GPA">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
+
+  for (let slide of slides) {
+    slide.style.display = "none";
+  }
+  for (let dot of dots) {
+    dot.classList.remove("active");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].classList.add("active");
+  captionText.innerHTML = dots[slideIndex - 1].alt;
+}
+</script>
+
+</body>
+</html>
