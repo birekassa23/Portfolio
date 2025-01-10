@@ -286,45 +286,17 @@
                             <li><i class="fab fa-telegram"></i> <a href="https://t.me/birekassa">@birekassa</a></li>
                             <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/25193567890">+251917828062</a> </li>
                             
-                                <li> 
-                                    <i class="fas fa-info-circle"></i> 
-                                    <a href="Information.html" onclick="return confirmInfo(event)">My Background Info</a> 
-                                </li>
+                            <li> 
+                                <i class="fas fa-info-circle"></i> 
+                                <a href="Information.html" onclick="return confirmInfo()">My Background Info</a> 
+                            </li>
                             
-                                <script>
-                                    function confirmInfo(event) {
-                                        event.preventDefault(); // Prevent the default navigation action
-                            
-                                        // SweetAlert2 customized message
-                                        Swal.fire({
-                                            title: 'Dear Viewers',
-                                            text: "Please don't judge me from the provided information. It doesn't fully describe me, and that's the fault of my teenage years.",
-                                            icon: 'warning',  // Set the icon to a warning, can use 'info', 'error', 'success', etc.
-                                            showCancelButton: true,
-                                            confirmButtonText: 'I Accept',  // Text for the confirm button
-                                            cancelButtonText: 'Cancel',     // Text for the cancel button
-                                            customClass: {
-                                                popup: 'custom-popup'  // Optional: Custom styling for the SweetAlert popup
-                                            }
-                                        }).then((result) => {
-                                            if (result.isConfirmed) {
-                                                // If the user clicks 'I Accept', navigate to the Information page
-                                                window.location.href = 'Information.html';
-                                            }
-                                        });
-                                    }
-                                </script>
-                            
-                                <style>
-                                    /* Optional: Custom styling for the SweetAlert popup */
-                                    .custom-popup {
-                                        background-color: #f7f7f7;
-                                        border-radius: 15px;
-                                        padding: 30px;
-                                        font-family: 'Arial', sans-serif;
-                                        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-                                    }
-                                </style>
+                            <script>
+                                function confirmInfo() {
+                                    var message = "Dear Viewers, please don't judge me from the provided information. It doesn't fully describe me, and that's the fault of my teenage years.";
+                                    return confirm(message);
+                                }
+                            </script>
                             
                         </ul>
                     </div>
