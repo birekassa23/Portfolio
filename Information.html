@@ -64,45 +64,6 @@ img {
   padding: 8px;
 }
 
-/* Thumbnail images container */
-.row {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  overflow-x: auto;
-  gap: 10px;
-  padding: 10px;
-}
-
-.column {
-  flex: 0 0 auto;
-  width: 16.66%;
-}
-
-.column img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 5px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0.6;
-}
-
-.column img:hover,
-.column img.active {
-  transform: scale(1.1);
-  opacity: 1;
-}
-
-/* Ensure horizontal scroll for smaller devices */
-@media (max-width: 600px) {
-  .row {
-    gap: 5px;
-  }
-  .column {
-    width: 30%;
-  }
-}
   .centered-heading {
     text-align: center;
     font-size: 2rem;
@@ -131,9 +92,6 @@ img {
 <body>
 
   <h2 class="centered-heading">Show My Information</h2>
-
-  
-
 <div class="container">
   <!-- Slides -->
   <div class="mySlides">
@@ -175,26 +133,68 @@ img {
   </div>
 
   <!-- Thumbnails -->
-  <div class="row">
-    <div class="column">
-      <img class="demo" src="My_info\ministry_result.jpg" onclick="currentSlide(1)" alt="Grade 8 Ministry Exam Result">
-    </div>
-    <div class="column">
-      <img class="demo" src="My_info\grade_9_to_10.jpg" onclick="currentSlide(2)" alt="Class Report from 9 to 10">
-    </div>
-    <div class="column">
-      <img class="demo" src="My_info\matric_result.jpg" onclick="currentSlide(3)" alt="Grade 10 Matric Exam Result">
-    </div>
-    <div class="column">
-      <img class="demo" src="My_info\grade_11_to_12.jpg" onclick="currentSlide(4)" alt="Class Report from 11 to 12">
-    </div>
-    <div class="column">
-      <img class="demo" src="My_info\interance_result.jpg" onclick="currentSlide(5)" alt="Grade 12 Entrance Exam Result">
-    </div>
-    <div class="column">
-      <img class="demo" src="My_info\current_commulitive_GPA.jpg" onclick="currentSlide(6)" alt="Current Cumulative GPA">
-    </div>
+<div class="row">
+  <div class="column">
+    <img class="demo" src="My_info\ministry_result.jpg" onclick="currentSlide(1)" alt="Grade 8 Ministry Exam Result">
   </div>
+  <div class="column">
+    <img class="demo" src="My_info\grade_9_to_10.jpg" onclick="currentSlide(2)" alt="Class Report from 9 to 10">
+  </div>
+  <div class="column">
+    <img class="demo" src="My_info\matric_result.jpg" onclick="currentSlide(3)" alt="Grade 10 Matric Exam Result">
+  </div>
+  <div class="column">
+    <img class="demo" src="My_info\grade_11_to_12.jpg" onclick="currentSlide(4)" alt="Class Report from 11 to 12">
+  </div>
+  <div class="column">
+    <img class="demo" src="My_info\interance_result.jpg" onclick="currentSlide(5)" alt="Grade 12 Entrance Exam Result">
+  </div>
+  <div class="column">
+    <img class="demo" src="My_info\current_commulitive_GPA.jpg" onclick="currentSlide(6)" alt="Current Cumulative GPA">
+  </div>
+</div>
+<style>
+/* Thumbnail images container */
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.column {
+  flex: 0 0 auto;
+  width: 16.66%;
+}
+
+.column img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.6;
+}
+
+.column img:hover,
+.column img.active {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Ensure horizontal scroll for smaller devices */
+@media (max-width: 600px) {
+  .row {
+    gap: 5px;
+  }
+  .column {
+    width: 30%;
+  }
+}
+</style>
+
 </div>
 
 <script>
