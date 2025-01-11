@@ -1,241 +1,125 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-}
 
-/* Generic styling */
-* {
-  box-sizing: border-box;
-}
+<head>
+  <!-- Meta Information -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birehanu Kassa | Information</title>
 
-img {
-  vertical-align: middle;
-}
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <!-- AOS Library (Animate on Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!--SweetAlert2 CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.6/dist/sweetalert2.min.css" rel="stylesheet">
+  <!--SweetAlert2 JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.6/dist/sweetalert2.all.min.js"></script>
 
-/* Slideshow container */
-.container {
-  position: relative;
-  background-color: gray;
-}
+  <!-- Custom CSS  -->
+  <link rel="stylesheet" href="Information.css">
+</head>
 
-/* Hide slides by default */
-.mySlides {
-  display: none;
-}
-
-/* Navigation buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 16px;
-  font-size: 20px;
-  color: white;
-  font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 3px;
-  user-select: none;
-}
-
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Caption text */
-.caption-container {
-  text-align: center;
-  background-color: #3c4683;
-  color: white;
-  padding: 8px;
-}
-
-  .centered-heading {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #fff; /* White text for contrast */
-    background: linear-gradient(135deg, #000000 0%, #2f3369 100%); /* Blue background */
-    padding: 15px 20px; /* Adds space inside the element */
-    margin: 0 auto; /* Centers the heading on the page */
-    width: 100%; /* Ensures it spans the full width */
-    box-sizing: border-box; /* Includes padding in width */
-  }
-
-  @media (min-width: 768px) {
-    .centered-heading {
-      font-size: 2.5rem; /* Larger font size for tablets and above */
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .centered-heading {
-      font-size: 3rem; /* Even larger font size for desktops */
-    }
-  }
-.numbertext{
-  font-family: ' serif','Times New Roman', Times;
-  background-color: black;
-  color: white;
-  padding-left: 20px;
-  font-weight: bolder;
-  font-size: x-larges;
-}
-</style>
 <body>
-
   <h2 class="centered-heading">Those Are My Information</h2>
-<div class="container">
-  <!-- Slides -->
-  <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-    <img src="My_info\ministry_result.jpg" style="width:100%;">
+  <div class="">
+    <!-- Slides -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="My_info\ministry_result.jpg" style="width:100%;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="My_info\grade_9_to_10.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="My_info\matric_result.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="My_info\grade_11_to_12.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="My_info\interance_result.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img src="My_info\current_commulitive_GPA.jpg" style="width:100%">
+    </div>
+
+    <!-- Navigation buttons -->
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <!-- Caption -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="row">
+        <div class="column">
+          <img class="demo" src="My_info\ministry_result.jpg" onclick="currentSlide(1)" alt="Grade 8 Ministry Exam Result">
+        </div>
+        <div class="column">
+          <img class="demo" src="My_info\grade_9_to_10.jpg" onclick="currentSlide(2)" alt="Class Report from 9 to 10">
+        </div>
+        <div class="column">
+          <img class="demo" src="My_info\matric_result.jpg" onclick="currentSlide(3)" alt="Grade 10 Matric Exam Result">
+        </div>
+        <div class="column">
+          <img class="demo" src="My_info\grade_11_to_12.jpg" onclick="currentSlide(4)" alt="Class Report from 11 to 12">
+        </div>
+        <div class="column">
+          <img class="demo" src="My_info\interance_result.jpg" onclick="currentSlide(5)" alt="Grade 12 Entrance Exam Result">
+        </div>
+        <div class="column">
+          <img class="demo" src="My_info\current_commulitive_GPA.jpg" onclick="currentSlide(6)"alt="Current Cumulative GPA">
+        </div>
+    </div>
   </div>
 
-  <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-    <img src="My_info\grade_9_to_10.jpg" style="width:100%">
-  </div>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
-  <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
-    <img src="My_info\matric_result.jpg" style="width:100%">
-  </div>
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
 
-  <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
-    <img src="My_info\grade_11_to_12.jpg" style="width:100%">
-  </div>
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
 
-  <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
-    <img src="My_info\interance_result.jpg" style="width:100%">
-  </div>
-  <div class="mySlides">
-    <div class="numbertext">6 / 6</div>
-    <img src="My_info\current_commulitive_GPA.jpg" style="width:100%">
-  </div>
+    function showSlides(n) {
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
 
-  <!-- Navigation buttons -->
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
+      if (n > slides.length) { slideIndex = 1; }
+      if (n < 1) { slideIndex = slides.length; }
 
-  <!-- Caption -->
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
+      for (let slide of slides) {
+        slide.style.display = "none";
+      }
+      for (let dot of dots) {
+        dot.classList.remove("active");
+      }
 
-  <!-- Thumbnails -->
-<div class="row">
-  <div class="column">
-    <img class="demo" src="My_info\ministry_result.jpg" onclick="currentSlide(1)" alt="Grade 8 Ministry Exam Result">
-  </div>
-  <div class="column">
-    <img class="demo" src="My_info\grade_9_to_10.jpg" onclick="currentSlide(2)" alt="Class Report from 9 to 10">
-  </div>
-  <div class="column">
-    <img class="demo" src="My_info\matric_result.jpg" onclick="currentSlide(3)" alt="Grade 10 Matric Exam Result">
-  </div>
-  <div class="column">
-    <img class="demo" src="My_info\grade_11_to_12.jpg" onclick="currentSlide(4)" alt="Class Report from 11 to 12">
-  </div>
-  <div class="column">
-    <img class="demo" src="My_info\interance_result.jpg" onclick="currentSlide(5)" alt="Grade 12 Entrance Exam Result">
-  </div>
-  <div class="column">
-    <img class="demo" src="My_info\current_commulitive_GPA.jpg" onclick="currentSlide(6)" alt="Current Cumulative GPA">
-  </div>
-</div>
-<style>
-/* Thumbnail images container */
-.row {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  overflow-x: auto;
-  gap: 15px; /* Adjusted gap between images */
-  padding: 10px;
-}
-
-.column {
-  flex: 0 0 auto;
-  width: 16.66%;
-}
-
-.column img {
-  width: 100%;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  border-radius: 5px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0.6;
-}
-
-.column img:hover,
-.column img.active {
-  transform: scale(1.1);
-  opacity: 1;
-}
-
-/* Ensure horizontal scroll for smaller devices */
-@media (max-width: 600px) {
-  .row {
-    gap: 10px; /* Reduced gap for smaller devices */
-  }
-  .column {
-    width: 30%;
-  }
-}
-</style>
-
-</div>
-
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-
-  if (n > slides.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = slides.length; }
-
-  for (let slide of slides) {
-    slide.style.display = "none";
-  }
-  for (let dot of dots) {
-    dot.classList.remove("active");
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].classList.add("active");
-  captionText.innerHTML = dots[slideIndex - 1].alt;
-}
-</script>
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].classList.add("active");
+      captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+  </script>
 
 </body>
+
 </html>
