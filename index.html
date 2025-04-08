@@ -27,7 +27,7 @@
 <body class="d-flex flex-column min-vh-100 bg-dark">
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top: 100px;">
             <div class="container">
                 <a class="navbar-brand" href="#">Birehanu Kassa</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -37,10 +37,10 @@
                 <div class="collapse navbar-collapse bg-dark" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Recent Work</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Recent work</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About me</a></li>
                         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact me</a></li>
                     </ul>
                 </div>
             </div>
@@ -50,100 +50,195 @@
     <!-- Hero Section -->
     <main>
         <!-- Hero Section -->
-<section class="hero text-center text-md-start py-5" data-aos="fade-up">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- Text Content -->
-            <div class="col-md-6">
-                <h1 class="display-4">Hi, I'm Birehanu Kassa.</h1>
-                <p class="lead">
-                    I'm a 4<sup>th</sup>-Year Software Engineering student at Mizan Teppi University (MTU), 
-                    specializing in creating software applications and related technologies.
-                </p>
-                <a href="#portfolio" class="btn btn-primary btn-lg" aria-label="Explore my portfolio section">Explore My Work</a>
-            </div>
-            <!-- Image Content -->
-            <div class="col-md-6 text-center" data-aos="zoom-in">
-                <img 
-                    src="image/my_photo.jpg" 
-                    alt="Portrait of Birehanu Kassa, a Software Engineering student" 
-                    class="img-fluid rounded-circle shadow-lg"
-                    onerror="this.src='image/placeholder.jpg';"
-                >
-            </div>
-        </div>
-    </div>
-</section>
+        <section class="hero text-center text-md-start py-5" data-aos="fade-up">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Text Content -->
+                    <div class="col-md-6 text-white"
+                        style="background-color: black; margin-top: -50px; padding-top: 10px;">
+                        <h2 class="display-5 fw-bold mb-3">Hello 👋<br>I'm Birehanu Kassa</h2>
+                        <h4 class="text-primary mb-3"><b>Software Engineer</b> & <b>Freelancer</b></h4>
+                        <p class="lead">
+                            <i class="fas fa-server text-warning"></i> Focused on building powerful, scalable Back-End
+                            systems 🚀
+                        </p>
+                        <div class="p-3 rounded" style="background-color: #333;">
+                            <h5 class="fw-semibold text-info"><i class="fas fa-user"></i> About Me</h5>
+                            <hr class="border-secondary">
+                            <ul class="list-unstyled fw-semibold">
+                                <li><i class="fas fa-rocket text-success"></i> Passionate Back-End Developer
+                                    specializing in building robust
+                                    APIs, services, and scalable architecture.</li>
+                                <li><i class="fas fa-cogs text-danger"></i> Experienced in clean architecture and
+                                    enterprise-level backend
+                                    solutions.</li>
+                                <li><i class="fas fa-code text-primary"></i> <strong>Core technologies:</strong>
+                                    Node.js, NestJS, Express,
+                                    TypeScript, PostgreSQL, MongoDB, Docker.</li>
+                                <li><i class="fas fa-mobile-alt text-warning"></i> Also build mobile apps using
+                                    <strong>React
+                                        Native</strong> and desktop apps with <strong>Electron</strong>.
+                                </li>
+                                <p>
+                                    <li><i class="fas fa-map-marker-alt text-info"></i> Based in <strong>Addis Ababa,
+                                            Ethiopia</strong> and
+                                        working globally 🌐.</li>
+                                </p>
+                            </ul>
+                        </div>
+                        <a href="#portfolio" class="btn btn-primary btn-lg mt-3"
+                            aria-label="Explore my portfolio section">
+                            <i class="fas fa-arrow-down ms-2"></i> Explore My Work
+                        </a>
+                    </div>
 
 
-        <!-- About Section -->
-        <section id="about" class="py-5 " data-aos="zoom-in"
+                    <!-- Image Content -->
+                    <div class="col-md-6 text-center" data-aos="zoom-in">
+                        <img src="image/my_photo.jpg" alt="Portrait of Birehanu Kassa, a Software Engineer"
+                            class="img-fluid rounded-circle shadow-lg" onerror="this.src='image/placeholder.jpg';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section - Grouped by Related Technologies -->
+        <section id="" class="py-5" data-aos="zoom-in"
             style="background: linear-gradient(135deg, #000000 0%, #2f3369 100%); color: #333;">
             <div class="container">
-                <h2 class="text-center mb-4 text-white font-weight-bold">Courses I Have Successfully Completed.</h2>
+                <h2 class="text-center mb-4 text-white font-weight-bold">Technologies I Have Used.</h2>
                 <hr class="bg-white">
 
-                <!-- 2nd Year -->
+                <!-- Backend Technologies -->
                 <div class="row py-4 content align-items-center-center">
-                    <div class="col-md-6">
-                        <h3 class="text-white">2<sup>nd</sup> Year, 1<sup>st</sup> Term</h3>
+                    <div class="col-md-12">
                         <ul class="list-unstyled text-white">
-                            <li><i class="fab fa-cuttlefish"></i> C++</li>
-                            <li><i class="fas fa-microchip"></i> Computer Organization and Architecture (COA)</li>
-                            <li><i class="fas fa-database"></i> Fundamentals of Database</li>
-                            <li><i class="fas fa-cogs"></i> Fundamentals of Software Engineering</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <h3 class="text-white">2<sup>nd</sup> Year, 2<Sup>nd</Sup> Term</h3>
-                        <ul class="list-unstyled text-white">
-                            <li><i class="fas fa-database"></i> Advanced Database</li>
-                            <li><i class="fas fa-network-wired"></i> Data Structures</li>
-                            <li><i class="fas fa-network-wired"></i> Fundamentals of Networking</li>
-                            <li><i class="fas fa-desktop"></i> Operating Systems</li>
+                            <div class="row" style="background-color: #333; margin-top: 10%;">
+                                <h2 text-center><i class="fas fa-mobile-alt"></i> Web App Development</h2>
+                                <!-- First Column (4 Contact Icons) -->
+                                <div class="col-md-5">
+                                    <ul>
+                                        <li><strong>Backend Technologies:</strong></li>
+                                        <li>JavaScript (JS)</li>
+                                        <li>TypeScript (TS)</li>
+                                        <li>Node.js</li>
+                                        <li>Express.js</li>
+                                        <li>Next.js</li>
+                                        <li>NestJS</li>
+                                        <li>PHP</li>
+                                        <li><i class="fas fa-database"></i> Fundamentals of Database</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Vertical Line Between Columns -->
+                                <div class="col-md-1 d-flex justify-content-center align-items-center">
+                                    <div style="border-left: 3px solid #fff; height: 100%;"></div>
+                                </div>
+
+                                <!-- Second Column (4 Contact Icons) -->
+                                <div class="col-md-5">
+                                    <ul>
+                                        <li><strong>Front-End Technologies:</strong></li>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>React</li>
+                                        <li>Angular</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            <div class="row" style="background-color: #333; margin-top: 10%;">
+                                <h2 text-center><i class="fas fa-mobile-alt"></i> Mobile App Development</h2>
+                                <!-- First Column (4 Contact Icons) -->
+                                <div class="col-md-5">
+                                    <ul>
+                                        <li><strong>Backend Technologies:</strong></li>
+                                        <li><i class="fab fa-java"></i> Advanced Programming (Java)</li>
+                                        <li><i class="fab fa-cuttlefish"></i> C++</li>
+                                        <li><i class="fab fa-java"></i> platter</li>
+                                        <li><i class="fab fa-cuttlefish"></i> electron</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Vertical Line Between Columns -->
+                                <div class="col-md-1 d-flex justify-content-center align-items-center">
+                                    <div style="border-left: 3px solid #fff; height: 100%;"></div>
+                                </div>
+
+                                <!-- Second Column (4 Contact Icons) -->
+                                <div class="col-md-5">
+                                    <ul>
+                                        <li><strong>Front-End Technologies:</strong></li>
+                                        add by your self
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            <div class="row" style="background-color: #333; margin-top: 10%;">
+                                <h2 text-center><i class="fas fa-mobile-alt"></i> Disctop App Development</h2>
+                                <!-- First Column (4 Contact Icons) -->
+                                <div class="col-md-5">
+                                    <ul>
+                                        <li><strong>Backend Technologies:</strong></li>
+                                        <li><i class="fas fa-object-group"></i> Object-Oriented Programming</li>
+                                        <li><i class="fab fa-java"></i> Advanced Programming (Java)</li>
+                                        <li><i class="fab fa-cuttlefish"></i> C++</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Vertical Line Between Columns -->
+                                <div class="col-md-1 d-flex justify-content-center align-items-center">
+                                    <div style="border-left: 3px solid #fff; height: 100%;"></div>
+                                </div>
+
+                                <!-- Second Column (4 Contact Icons) -->
+                                <div class="col-md-5">
+                                    <ul>
+                                        <li><strong>Front-End Technologies:</strong></li>
+                                        add by your self
+                                    </ul>
+                                </div>
+                            </div>
                         </ul>
                     </div>
                 </div>
+            </div>
 
-                <!-- 3rd Year -->
-                <div class="row py-4">
-                    <div class="col-md-6">
-                        <h3 class="text-white">3<sup>rd</sup> Year, 1<sup>st</sup> Term</h3>
-                        <ul class="list-unstyled text-white">
-                            <li><i class="fab fa-html5"></i> Web Design Programming</li>
-                            <li><i class="fas fa-microchip"></i> Microprocessor and Assembly</li>
-                            <li><i class="fas fa-tools"></i> Software Engineering Tools and Practice</li>
-                            <li><i class="fas fa-object-group"></i> Object-Oriented Programming</li>
-                            <li><i class="fas fa-tasks"></i> Requirements Engineering</li>
+            <div class="container">
+                <div class="row" style="background-color: #333; margin-top: 10%;">
+                    <h2 class="text-center mb-4 text-white font-weight-bold">Additional Technologies I Have.</h2>
+                    <!-- First Column (4 Contact Icons) -->
+                    <div class="col-md-5">
+                        <ul>
+                            <ul class="list-unstyled text-white">
+                                <li><i class="fas fa-network-wired"></i> Data Structures</li>
+                                <li><i class="fas fa-database"></i> Advanced Database</li>
+                                <li><i class="fas fa-lock"></i> Fundamentals of Software Security</li>
+                                <li><i class="fas fa-network-wired"></i> Fundamentals of Networking</li>
+                                <li><i class="fas fa-cloud"></i> Fundamentals of Cloud Computing</li>
+                                <li><i class="fas fa-tools"></i> Software Engineering Tools and Practice</li>
+                                <li><i class="fas fa-check-circle"></i> Software Testing and Quality Assurance</li>
+                            </ul>
                         </ul>
                     </div>
-                    <div class="col-md-6">
-                        <h3 class="text-white">3<sup>rd</sup> Year, 2<sup>nd</sup> Term</h3>
+
+                    <!-- Vertical Line Between Columns -->
+                    <div class="col-md-1 d-flex justify-content-center align-items-center">
+                        <div style="border-left: 3px solid #fff; height: 100%;"></div>
+                    </div>
+
+                    <!-- Second Column (4 Contact Icons) -->
+                    <div class="col-md-5">
                         <ul class="list-unstyled text-white">
+                            <li><i class="fas fa-tasks"></i> Requirements Engineering</li>
                             <li><i class="fas fa-drafting-compass"></i> Software Architecture and Design</li>
                             <li><i class="fas fa-code"></i> Compiler Design</li>
-                            <li><i class="fab fa-java"></i> Advanced Programming (Java)</li>
-                            <li><i class="fas fa-cloud"></i> Fundamentals of Cloud Computing</li>
-                            <li><i class="fas fa-lock"></i> Fundamentals of Software Security</li>
                             <li><i class="fas fa-brain"></i> Fundamentals of Machine Learning</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- 4th Year -->
-                <div class="row py-4">
-                    <div class="col-md-6">
-                        <h3 class="text-white">4<sup>th</sup> Year, 1<sup>st</sup> Term</h3>
-                        <ul class="list-unstyled text-white">
-                            <li><i class="fas fa-check-circle"></i> Software Testing and Quality Assurance</li>
-                            <li><i class="fas fa-mobile-alt"></i> Mobile App Development</li>
-                            <li><i class="fas fa-network-wired"></i> Fundamentals of Distributed Systems</li>
                             <li><i class="fas fa-robot"></i> Fundamentals of Artificial Intelligence</li>
                             <li><i class="fas fa-project-diagram"></i> Software Project Management</li>
-                            <li><i class="fas fa-plug"></i> Real-time and Embedded Systems</li>
                         </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <!-- this is My Entern Time  -->
                     </div>
                 </div>
             </div>
@@ -151,9 +246,12 @@
 
 
 
+
+
+
         <!-- Portfolio Section -->
         <section id="portfolio" class="py-5" data-aos="zoom-in" style="background-image: url('image2.png');">
-            <div class="container-fluid">
+            <div class="container">
                 <h2 class="text-center mb-4 text-primary">Portfolio</h2>
                 <hr>
                 <div class="row g-4">
@@ -283,52 +381,19 @@
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="py-5 bg-light" data-aos="zoom-in">
-            <div class="container">
-                <h2 class="text-center mb-4 text-primary">Services</h2>
-                <hr>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Web Development</h3>
-                        <p>Creating dynamic, responsive websites.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <i class="fas fa-desktop"></i>
-                        <h3>Desktop App Development</h3>
-                        <p>Custom software solutions for businesses.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h3>Android App Development</h3>
-                        <p>Engaging mobile apps for Android.</p>
-                    </div>
-                </div>
-            </div>
-
-        </section>
 
         <!-- Contact Section -->
         <section id="contact" class="py-5" data-aos="zoom-in"
             style="background: linear-gradient(135deg, #000000 0%, #2f3369 100%);">
             <div class="container">
-                <h2 class="text-center mb-4 text-primary">Contact Me</h2>
+                <h2 class="text-center mb-4 text-primary">I Value Your Feedback <i class="bi bi-emoji-smile"></i></h2>
                 <hr>
+
+                <!-- First Row for the Contact Form -->
                 <div class="row">
-                    <div class="col-md-6">
-                        <ul class="contact-list list-unstyled">
-                            <li><i class="fas fa-mobile-alt"></i> <a href="tel:+251917828062">+251917828062</a></li>
-                            <li><i class="fas fa-envelope"></i> <a href="mailto:birekassa17828062@gmail.com">birekassa17828062@gmail.com</a></li>
-                            <li><i class="fab fa-telegram"></i> <a href="https://t.me/birekassa">@birekassa</a></li>
-                            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/25193567890">+251917828062</a> </li> 
-                            <li><i class="fas fa-info-circle"></i> <a href="Information.html" onclick="return confirmInfo()">My Background Info</a></li>
-                        </ul>
-                    </div>
-                    <!-- Contact form section (feedback form) -->
-                    <div class="col-md-6" data-aos="flip-left">
+                    <div class="col-md-12" data-aos="flip-left">
                         <form id="contactForm" onsubmit="sendEmail(); return false;">
-                            <h3>I Value Your Feedback <i class="bi bi-emoji-smile"></i></h3>
+                            <h3></h3>
                             <!-- Smiley icon using Bootstrap Icons -->
                             <div class="mb-3">
                                 <label for="email" class="form-label">Your Email</label>
@@ -350,15 +415,56 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Second Row for Contact Icons -->
+                <div class="row" style="background-color: #333; margin-top: 10%;">
+                    <h2 class="text-center mb-4 ">Contact me</h2>
+                    <!-- First Column (4 Contact Icons) -->
+                    <div class="col-md-5">
+                        <ul class="contact-list list-unstyled text-center">
+                            <li><i class="fas fa-mobile-alt" style="font-size: 40px;"></i> <a
+                                    href="tel:+251917828062"></a></li>
+                            <li><i class="fas fa-envelope" style="font-size: 40px;"></i> <a
+                                    href="mailto:birekassa17828062@gmail.com"></a></li>
+                            <li><i class="fab fa-telegram" style="font-size: 40px;"></i> <a
+                                    href="https://t.me/birekassa"></a></li>
+                            <li><i class="fab fa-whatsapp" style="font-size: 40px;"></i> <a
+                                    href="https://wa.me/25193567890"></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Vertical Line Between Columns -->
+                    <div class="col-md-1 d-flex justify-content-center align-items-center">
+                        <div style="border-left: 3px solid #fff; height: 100%;"></div>
+                    </div>
+
+                    <!-- Second Column (4 Contact Icons) -->
+                    <div class="col-md-5">
+                        <ul class="contact-list list-unstyled text-center">
+                            <li><i class="fas fa-link" style="font-size: 40px;"></i> <a
+                                    href="https://www.linkedin.com/in/birekassa" target="_blank"></a></li>
+                            <li><i class="fas fa-upwork" style="font-size: 40px;"></i> <a
+                                    href="https://Upwork.com/birekassa" target="_blank"></a></li>
+                            <li><i class="fab fa-github" style="font-size: 40px;"></i> <a
+                                    href="https://github.com/birekassa23" target="_blank"></a></li>
+                            <li><i class="fas fa-twitter" style="font-size: 40px;"></i> <a
+                                    href="https://twitter.com/birekassa" target="_blank"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
+
+
+
     </main>
 
     <!-- Footer -->
     <footer class="text-center py-3 bg-dark text-white">
         <p>&copy; 2024 Birehanu Kassa. All rights reserved.</p>
     </footer>
-   <script>
+    <script>
         // Trigger AOS refresh after setting new attributes
         AOS.refresh();
     </script>
