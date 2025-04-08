@@ -17,6 +17,9 @@
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.6/dist/sweetalert2.min.css" rel="stylesheet">
     <!--SweetAlert2 JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.6/dist/sweetalert2.all.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
 
     <!-- Custom CSS  -->
     <link rel="stylesheet" href="Style.css">
@@ -137,45 +140,359 @@
         <section class="hero text-center text-md-start py-5" data-aos="fade-up">
             <div class="container">
                 <div class="row align-items-center">
-                    <!-- Text Content -->
-                    <div class="col-md-6 text-white"
-                        style="background-color: black; margin-top: -50px; padding-top: 10px;">
-                        <h2 class="display-5 fw-bold mb-3">Hello 👋<br>I'm Birehanu Kassa</h2>
-                        <h4 class="text-primary mb-3"><b> Back-End Engineer | Developer</b> & <b
-                                class="text-warning">Freelancer</b></h4>
-                        <p class="lead">
-                            <i class="fas fa-server text-warning"></i> Focused on building powerful, scalable Back-End
-                            systems
-                        </p>
-                        <div class="p-3 rounded" style="background-color: #333;">
-                            <h5 class="fw-semibold text-info"><i class="fas fa-user"></i> About Me</h5>
-                            <hr class="border-secondary">
-                            <ul class="list-unstyled fw-semibold">
-                                <li><i class="fas fa-rocket text-success"></i> Passionate Back-End Developer
-                                    specializing in building robust
-                                    APIs, services, and scalable architecture.</li>
-                                <li><i class="fas fa-cogs text-danger"></i> Experienced in clean architecture and
-                                    enterprise-level backend
-                                    solutions.</li>
-                                <li><i class="fas fa-code text-primary"></i> <strong>Core technologies:</strong>
-                                    Node.js, NestJS, Express,
-                                    TypeScript, PostgreSQL, MongoDB, Docker.</li>
-                                <li><i class="fas fa-mobile-alt text-warning"></i> Also build mobile apps using
-                                    <strong>React
-                                        Native</strong> and desktop apps with <strong>Electron</strong>.
-                                </li>
-                                <p>
-                                    <li><i class="fas fa-map-marker-alt text-info"></i> Based in <strong>Addis Ababa,
-                                            Ethiopia</strong> and
-                                        working globally 🌐.</li>
-                                </p>
-                            </ul>
+                    <div class="col-md-6 text-white position-relative overflow-hidden"
+                        style="margin-top: -50px; padding-top: 30px;">
+                        <!-- Animated background elements -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100" style="z-index: -1;">
+                            <div class="particle-particle-1"
+                                style="position: absolute; width: 8px; height: 8px; background: rgba(0, 150, 255, 0.5); border-radius: 50%; top: 20%; left: 15%;">
+                            </div>
+                            <div class="particle-particle-2"
+                                style="position: absolute; width: 12px; height: 12px; background: rgba(255, 200, 0, 0.4); border-radius: 50%; top: 60%; left: 80%;">
+                            </div>
+                            <div class="particle-particle-3"
+                                style="position: absolute; width: 6px; height: 6px; background: rgba(100, 255, 100, 0.3); border-radius: 50%; top: 30%; left: 70%;">
+                            </div>
                         </div>
-                        <a href="#portfolio" class="btn btn-primary btn-lg mt-3"
-                            aria-label="Explore my portfolio section">
-                            <i class="fas fa-arrow-down ms-2"></i> Explore My Work
-                        </a>
+
+                        <!-- Main content with glow effects -->
+                        <div class="glow-container" data-aos="fade-right" data-aos-delay="100">
+                            <h2 class="display-5 fw-bold mb-3 text-shadow-primary">
+                                <span class="greeting-anim">Hello</span> 👋<br>
+                                <span class="name-anim">I'm Birehanu Kassa</span>
+                            </h2>
+
+                            <h4 class="mb-3 typewriter-text">
+                                <span class="text-primary"><b>Back-End Engineer | Developer</b></span> &
+                                <span class="text-warning pulse"><b>Freelancer</b></span>
+                            </h4>
+
+                            <p class="lead floating" style="animation-delay: 0.3s;">
+                                <i class="fas fa-server text-warning"></i> Focused on building powerful, scalable
+                                Back-End systems
+                            </p>
+                        </div>
+
+                        <!-- About Me Card with subtle glow -->
+                        <div class="p-4 rounded-3 glow-hover"
+                            style="background: rgba(30, 30, 30, 0.7); backdrop-filter: blur(5px); border: 1px solid rgba(0, 150, 255, 0.2);"
+                            data-aos="zoom-in" data-aos-delay="200">
+                            <h3 class="fw-semibold text-info glow-text">
+                                <i class="fas fa-user"></i> About Me
+                            </h3>
+                            <hr class="border-secondary glow-hr">
+
+                            <ul class="list-unstyled fw-semibold" style="position: relative;">
+                                <ul class="mb-3 fade-in-list" style="animation-delay: 0.1s; font-size: x-large;">
+                                    <li> I'm a Software Engineer who loves back-end development—especially crafting
+                                        scalable and resilient systems.</li>
+                                    <li>
+                                        Experienced in clean architecture and building enterprise-grade backend
+                                        solutions.
+                                    </li>
+                                </ul>
+                                <ul style="margin-top: 40px; font-size: larger;">
+                                    <h3>My Strengths</h3>
+                                    <li class="mb-3 fade-in-list" style="animation-delay: 0.3s;">
+                                        I quickly adapt to new technologies and development environments.
+                                    </li>
+                                </ul>
+                                <li class="fade-in-list" style="animation-delay: 0.5s; margin-top: 80px;">
+                                    <i class="fas fa-map-marker-alt text-info"></i> Based in <strong>Addis Ababa,
+                                        Ethiopia</strong>, <u><b>working
+                                            with clients worldwide</b></u> 🌐.
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <!-- Animated CTA button -->
+                        <div class="mt-4" data-aos="fade-up" data-aos-delay="300">
+                            <a href="https://github.com/birekassa23" class="btn btn-primary btn-lg btn-glow"
+                                aria-label="Explore my portfolio section" style="position: relative; overflow: hidden;">
+                                <span class="button-content">
+                                    <i class="fas fa-arrow-down me-2"></i> Explore my work on
+                                    <i class="fab fa-github ms-2" style="font-size: 1.3rem;"></i>
+                                </span>
+                                <span class="button-glow"></span>
+                            </a>
+                        </div>
                     </div>
+
+                    <style>
+                        /* Base styles */
+                        .text-shadow-primary {
+                            text-shadow: 0 0 10px rgba(0, 150, 255, 0.3);
+                        }
+
+                        /* Animations */
+                        .greeting-anim {
+                            display: inline-block;
+                            animation: bounceIn 0.8s ease-out;
+                        }
+
+                        .name-anim {
+                            display: inline-block;
+                            background: linear-gradient(90deg, #fff, #aaa);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            color: transparent;
+                            animation: slideInFromLeft 0.8s ease-out;
+                        }
+
+                        .typewriter-text {
+                            overflow: hidden;
+                            border-right: 2px solid #0af;
+                            white-space: nowrap;
+                            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+                        }
+
+                        .floating {
+                            animation: floating 3s ease-in-out infinite;
+                        }
+
+                        .pulse {
+                            animation: pulse 2s infinite;
+                        }
+
+                        .fade-in-list {
+                            opacity: 0;
+                            animation: fadeIn 0.5s forwards;
+                        }
+
+                        /* Glow effects */
+                        .glow-text {
+                            text-shadow: 0 0 8px rgba(0, 200, 255, 0.6);
+                        }
+
+                        .glow-hover:hover {
+                            box-shadow: 0 0 15px rgba(0, 150, 255, 0.4);
+                        }
+
+                        .glow-hr {
+                            height: 1px;
+                            background: linear-gradient(90deg, transparent, rgba(0, 150, 255, 0.5), transparent);
+                            border: none;
+                        }
+
+                        /* Button effects */
+                        .btn-glow {
+                            transition: all 0.3s ease;
+                            position: relative;
+                            overflow: hidden;
+                        }
+
+                        .btn-glow:hover {
+                            transform: translateY(-3px);
+                            box-shadow: 0 5px 15px rgba(0, 150, 255, 0.4);
+                        }
+
+                        .button-glow {
+                            position: absolute;
+                            top: 0;
+                            left: -100%;
+                            width: 100%;
+                            height: 100%;
+                            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+                            transition: 0.5s;
+                        }
+
+                        .btn-glow:hover .button-glow {
+                            left: 100%;
+                        }
+
+                        /* Particle animations */
+                        @keyframes floatParticle1 {
+
+                            0%,
+                            100% {
+                                transform: translate(0, 0);
+                            }
+
+                            50% {
+                                transform: translate(10px, 10px);
+                            }
+                        }
+
+                        @keyframes floatParticle2 {
+
+                            0%,
+                            100% {
+                                transform: translate(0, 0);
+                            }
+
+                            50% {
+                                transform: translate(-15px, 5px);
+                            }
+                        }
+
+                        @keyframes floatParticle3 {
+
+                            0%,
+                            100% {
+                                transform: translate(0, 0);
+                            }
+
+                            50% {
+                                transform: translate(5px, -10px);
+                            }
+                        }
+
+                        /* Keyframe animations */
+                        @keyframes bounceIn {
+                            0% {
+                                transform: scale(0.8);
+                                opacity: 0;
+                            }
+
+                            50% {
+                                transform: scale(1.1);
+                            }
+
+                            100% {
+                                transform: scale(1);
+                                opacity: 1;
+                            }
+                        }
+
+                        @keyframes slideInFromLeft {
+                            0% {
+                                transform: translateX(-50px);
+                                opacity: 0;
+                            }
+
+                            100% {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                        }
+
+                        @keyframes typing {
+                            from {
+                                width: 0
+                            }
+
+                            to {
+                                width: 100%
+                            }
+                        }
+
+                        @keyframes blink-caret {
+
+                            from,
+                            to {
+                                border-color: transparent
+                            }
+
+                            50% {
+                                border-color: #0af
+                            }
+                        }
+
+                        @keyframes floating {
+                            0% {
+                                transform: translateY(0px);
+                            }
+
+                            50% {
+                                transform: translateY(-8px);
+                            }
+
+                            100% {
+                                transform: translateY(0px);
+                            }
+                        }
+
+                        @keyframes pulse {
+                            0% {
+                                opacity: 0.8;
+                            }
+
+                            50% {
+                                opacity: 1;
+                                text-shadow: 0 0 10px rgba(255, 200, 0, 0.6);
+                            }
+
+                            100% {
+                                opacity: 0.8;
+                            }
+                        }
+
+                        @keyframes fadeIn {
+                            to {
+                                opacity: 1;
+                            }
+                        }
+
+                        /* Apply particle animations */
+                        .particle-particle-1 {
+                            animation: floatParticle1 8s ease-in-out infinite;
+                        }
+
+                        .particle-particle-2 {
+                            animation: floatParticle2 10s ease-in-out infinite;
+                        }
+
+                        .particle-particle-3 {
+                            animation: floatParticle3 12s ease-in-out infinite;
+                        }
+
+                        /* Delay for list items */
+                        .fade-in-list:nth-child(1) {
+                            animation-delay: 0.1s;
+                        }
+
+                        .fade-in-list:nth-child(2) {
+                            animation-delay: 0.3s;
+                        }
+
+                        .fade-in-list:nth-child(3) {
+                            animation-delay: 0.5s;
+                        }
+
+                        .fade-in-list:nth-child(4) {
+                            animation-delay: 0.7s;
+                        }
+
+                        .fade-in-list:nth-child(5) {
+                            animation-delay: 0.9s;
+                        }
+                    </style>
+
+                    <script>
+                        // Initialize AOS animations
+                        if (typeof AOS !== 'undefined') {
+                            AOS.init({
+                                duration: 800,
+                                easing: 'ease-out-quart',
+                                once: true
+                            });
+                        } else {
+                            document.addEventListener('DOMContentLoaded', function () {
+                                AOS.init({
+                                    duration: 800,
+                                    easing: 'ease-out-quart',
+                                    once: true
+                                });
+                            });
+                        }
+
+                        // Add random movement to particles
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const particles = document.querySelectorAll('[class^="particle-particle"]');
+                            particles.forEach(particle => {
+                                // Randomize initial position
+                                const randomTop = Math.random() * 80 + 10;
+                                const randomLeft = Math.random() * 80 + 10;
+                                particle.style.top = `${randomTop}%`;
+                                particle.style.left = `${randomLeft}%`;
+
+                                // Randomize animation duration
+                                const randomDuration = Math.random() * 10 + 5;
+                                particle.style.animationDuration = `${randomDuration}s`;
+                            });
+                        });
+                    </script>
 
 
                     <!-- Image Content -->
@@ -190,268 +507,244 @@
         <section id="technologies" class="py-5" data-aos="zoom-in"
             style="background: linear-gradient(135deg, #0f0f0f 0%, #2f3369 100%); color: #fff;">
             <div class="container">
-                <h2 class="text-center mb-5 font-weight-bold" style="font-size: 2.5rem;">
-                    🚀 Technologies I Have Used
+                <h2 class="text-center mb-5 font-weight-bold" style="font-size: 2.5rem;">🚀 Technologies I Have Used
                 </h2>
 
-                <!-- Web App Development Section -->
-                <div class="row shadow-lg rounded-lg p-4" style="background-color: #1f1f2e; margin-top: 3rem;"
-                    data-aos="fade-up">
-                    <div class="col-12 text-center mb-3">
-                        <h3>🌐 Web App Development <i class="fas fa-globe-code"></i></h3>
+                <!-- Web App Development -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-12 text-center mb-4">
+                        <h3 class="section-title">🌐 Web App Development <i class="fas fa-globe"></i></h3>
                     </div>
-                    <div class="col-md-5">
-                        <ul class="list-unstyled">
-                            <li><strong>🧩 Backend:</strong></li>
-                            <li><i class="devicon-javascript-plain colored"></i> JavaScript (JS)</li>
-                            <li><i class="devicon-typescript-plain colored"></i> TypeScript (TS)</li>
-                            <li><i class="devicon-nodejs-plain colored"></i> Node.js</li>
-                            <li><i class="devicon-express-original-wordmark colored"></i> Express.js</li>
-                            <li><i class="devicon-nextjs-original-wordmark"></i> Next.js</li>
-                            <li><i class="devicon-nestjs-plain colored"></i> NestJS</li>
-                            <li><i class="devicon-php-plain colored"></i> PHP</li>
-                            <li><i class="fas fa-database"></i> Fundamentals of Database</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-1 d-flex justify-content-center align-items-center">
-                        <div style="border-left: 3px solid #aaa; height: 100%;"></div>
-                    </div>
-                    <div class="col-md-5">
-                        <ul class="list-unstyled">
-                            <li><strong>🎨 Front-End:</strong></li>
-                            <li><i class="devicon-html5-plain colored"></i> HTML</li>
-                            <li><i class="devicon-css3-plain colored"></i> CSS</li>
-                            <li><i class="devicon-react-original colored"></i> React</li>
-                            <li><i class="devicon-angularjs-plain colored"></i> Angular</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Mobile App Development Section -->
-                <div class="row shadow-lg rounded-lg p-4" style="background-color: #1f1f2e; margin-top: 3rem;"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-12 text-center mb-3">
-                        <h3>📱 Mobile App Development <i class="fas fa-mobile-alt"></i></h3>
-                    </div>
-                    <div class="col-md-5">
-                        <ul class="list-unstyled">
-                            <li><strong>🧩 Backend:</strong></li>
-                            <li><i class="devicon-java-plain colored"></i> Java</li>
-                            <li><i class="devicon-cplusplus-plain colored"></i> C++</li>
-                            <li><i class="devicon-flutter-plain colored"></i> Flutter</li>
-                            <li><i class="devicon-electron-original colored"></i> Electron</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-1 d-flex justify-content-center align-items-center">
-                        <div style="border-left: 3px solid #aaa; height: 100%;"></div>
-                    </div>
-                    <div class="col-md-5">
-                        <ul class="list-unstyled">
-                            <li><strong>🎨 Front-End:</strong></li>
-                            <li>📱 Flutter Widgets</li>
-                            <li>📲 React Native</li>
-                            <li>💡 Hybrid HTML/CSS</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Desktop App Development Section -->
-                <div class="row shadow-lg rounded-lg p-4" style="background-color: #1f1f2e; margin-top: 3rem;"
-                    data-aos="fade-up" data-aos-delay="400">
-                    <div class="col-12 text-center mb-3">
-                        <h3>🖥️ Desktop App Development <i class="fas fa-desktop"></i></h3>
-                    </div>
-                    <div class="col-md-5">
-                        <ul class="list-unstyled">
-                            <li><strong>🧩 Backend:</strong></li>
-                            <li><i class="devicon-java-plain colored"></i> Java</li>
-                            <li><i class="devicon-cplusplus-plain colored"></i> C++</li>
-                            <li>🧩 Object-Oriented Programming (OOP)</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-1 d-flex justify-content-center align-items-center">
-                        <div style="border-left: 3px solid #aaa; height: 100%;"></div>
-                    </div>
-                    <div class="col-md-5">
-                        <ul class="list-unstyled">
-                            <li><strong>🎨 Front-End:</strong></li>
-                            <li>⚙️ JavaFX / Swing</li>
-                            <li>🎛️ Qt</li>
-                            <li>⚡ Electron</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Additional Technologies Section -->
-                <div class="row shadow-lg rounded-lg p-4" style="background-color: #1f1f2e; margin-top: 3rem;"
-                    data-aos="fade-up" data-aos-delay="600">
-                    <div class="col-12 text-center mb-3">
-                        <h3>🧠 Additional Technologies <i class="fas fa-tools"></i></h3>
-                    </div>
-                    <div class="col-md-5">
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-network-wired"></i> Data Structures</li>
-                            <li><i class="fas fa-database"></i> Advanced Database</li>
-                            <li><i class="fas fa-lock"></i> Software Security</li>
-                            <li><i class="fas fa-network-wired"></i> Networking Fundamentals</li>
-                            <li><i class="fas fa-cloud"></i> Cloud Computing</li>
-                            <li><i class="fas fa-tools"></i> Engineering Tools</li>
-                            <li><i class="fas fa-check-circle"></i> QA & Testing</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-1 d-flex justify-content-center align-items-center">
-                        <div style="border-left: 3px solid #aaa; height: 100%;"></div>
-                    </div>
-                    <div class="col-md-5">
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-tasks"></i> Requirements Engineering</li>
-                            <li><i class="fas fa-drafting-compass"></i> Architecture & Design</li>
-                            <li><i class="fas fa-code"></i> Compiler Design</li>
-                            <li><i class="fas fa-brain"></i> Machine Learning</li>
-                            <li><i class="fas fa-robot"></i> Artificial Intelligence</li>
-                            <li><i class="fas fa-project-diagram"></i> Project Management</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="py-5" data-aos="zoom-in" style="background-image: url('image2.png');">
-            <div class="container">
-                <h2 class="text-center mb-4 text-primary">Portfolio</h2>
-                <hr>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <img src="https://www.bing.com/th?id=OADD2.7696634806419_1AZ7URY9E4IOPAGIMH&pid=21.2&c=16&roil=0&roit=0.1083&roir=1&roib=0.8933&w=472&h=247&rs=2&qlt=100"
-                                class="card-img" alt="Hotel Management System">
-                            <div class="card-body">
-                                <h5 class="card-title">Web Hotel Management System</h5>
-                                <p class="card-text">Streamlined hotel reservations and bookings.</p>
-                                <a href="#contact" class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#hotel_project" aria-expanded="false"
-                                    aria-controls="hotel_project">See More</a>
-                                <div id="hotel_project" class="collapse">
-                                    <p>
-                                        The Web Hotel Management System is a comprehensive platform designed to
-                                        streamline hotel operations, reservations, and customer management. It offers an
-                                        intuitive interface for guests to search for rooms, check availability, and make
-                                        online bookings seamlessly.
-                                    </p>
-                                    <p>
-                                        Key Features:
-                                    <ul>
-                                        <li>Online room booking and reservation management.</li>
-                                        <li>Real-time availability and pricing updates.</li>
-                                        <li>Guest profile management and booking history.</li>
-                                        <li>Secure payment gateway integration.</li>
-                                        <li>Automated emai notifications.</li>
-                                        <li>Room inventory and housekeeping status tracking.</li>
-                                        <li>Admin dashboard for reporting and analytics.</li>
-                                    </ul>
-                                    </p>
-                                    <p>
-                                        This system is built with scalability and security in mind, ensuring that it can
-                                        handle the growing needs of modern hotels while protecting sensitive customer
-                                        data. It simplifies hotel management, enhances customer experience, and improves
-                                        operational efficiency.
-                                    </p>
-                                </div>
-                            </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <ul class="tech-list">
+                                <li><strong>🧩 Backend:</strong></li>
+                                <hr class="section-hr">
+                                <li class="tech-item"><i class="devicon-javascript-plain colored"></i> JavaScript (JS)
+                                </li>
+                                <li class="tech-item"><i class="devicon-typescript-plain colored"></i> TypeScript (TS)
+                                </li>
+                                <li class="tech-item"><i class="devicon-nodejs-plain colored"></i> Node.js</li>
+                                <li class="tech-item"><i class="devicon-express-original-wordmark colored"></i>
+                                    Express.js</li>
+                                <li class="tech-item"><i class="devicon-nextjs-original-wordmark"></i> Next.js</li>
+                                <li class="tech-item"><i class="devicon-nestjs-plain colored"></i> NestJS</li>
+                                <li class="tech-item"><i class="devicon-php-plain colored"></i> PHP</li>
+                                <li class="tech-item"><i class="fas fa-database"></i> Database Fundamentals</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-1 d-flex justify-content-center align-items-center">
+                            <div class="vertical-divider"></div>
+                        </div>
+                        <div class="col-md-5">
+                            <ul class="tech-list">
+                                <li><strong>🎨 Front-End:</strong></li>
+                                <hr class="section-hr">
+                                <li class="tech-item"><i class="devicon-html5-plain colored"></i> HTML</li>
+                                <li class="tech-item"><i class="devicon-css3-plain colored"></i> CSS</li>
+                                <li class="tech-item"><i class="devicon-react-original colored"></i> React</li>
+                                <li class="tech-item"><i class="devicon-angularjs-plain colored"></i> Angular</li>
+                            </ul>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <img src="https://th.bing.com/th/id/OIP.ZMt2mYkmntN29y1l8GzHCwHaHZ?rs=1&pid=ImgDetMain"
-                                class="card-img" alt="School Management System">
-                            <div class="card-body">
-                                <h5 class="card-title">School Management System</h5>
-                                <p class="card-text">Integrated platform for educators and parents.</p>
-                                <a href="#contact" class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#School_project" aria-expanded="false"
-                                    aria-controls="School_project">See More</a>
-                                <div id="School_project" class="collapse">
-                                    <p>
-                                        The School Management System is a centralized platform designed to manage and
-                                        streamline administrative, academic, and communication processes in schools. It
-                                        bridges the gap between educators, students, and parents by providing seamless
-                                        access to information and tools.
-                                    </p>
-                                    <p>
-                                        Key Features:
-                                    <ul>
-                                        <li>Student enrollment and attendance tracking.</li>
-                                        <li>Timetable and schedule management.</li>
-                                        <li>Gradebook and performance tracking.</li>
-                                        <li>Online assignments and homework submissions.</li>
-                                        <li>Teacher and staff management.</li>
-                                        <li>Parent-teacher communication portal.</li>
-                                        <li>Library and inventory management.</li>
-                                        <li>Fee collection and financial reports.</li>
-                                        <li>Event scheduling and notifications.</li>
-                                    </ul>
-                                    </p>
-                                    <p>
-                                        This system is designed to simplify school operations, reduce paperwork, and
-                                        enhance collaboration between all stakeholders. It supports scalability, ensures
-                                        data security, and improves overall efficiency in managing educational
-                                        institutions.
-                                    </p>
-                                </div>
-                            </div>
+                <!-- Mobile App Development -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="col-12 text-center mb-4">
+                        <h3 class="section-title">📱 Mobile App Development <i class="fas fa-mobile-alt"></i></h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <ul class="tech-list">
+                                <li><strong>🧩 Backend:</strong></li>
+                                <hr class="section-hr">
+                                <li class="tech-item"><i class="devicon-java-plain colored"></i> Java</li>
+                                <li class="tech-item"><i class="devicon-cplusplus-plain colored"></i> C++</li>
+                                <li class="tech-item"><i class="devicon-flutter-plain colored"></i> Flutter</li>
+                                <li class="tech-item"><i class="devicon-electron-original colored"></i> Electron</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-1 d-flex justify-content-center align-items-center">
+                            <div class="vertical-divider"></div>
+                        </div>
+                        <div class="col-md-5">
+                            <ul class="tech-list">
+                                <li><strong>🎨 Front-End:</strong></li>
+                                <hr class="section-hr">
+                                <li class="tech-item"><i class="devicon-flutter-plain colored"></i> Flutter Widgets</li>
+                                <li class="tech-item"><i class="devicon-react-original colored"></i> React Native</li>
+                                <li class="tech-item"><i class="devicon-html5-plain colored"></i> Hybrid HTML/CSS</li>
+                            </ul>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <img src="https://th.bing.com/th/id/R.8db2699d1268723cacf2479d3eb36a26?rik=cYr4guzrAq5P%2bQ&riu=http%3a%2f%2fwww.bizzcom.com%2fimages%2fhms-content-pic.png&ehk=Ih44aRZ8s1Z7R9jTNPFNFQnjA22fO0nwHfKRUd8qskg%3d&risl=&pid=ImgRaw&r=0"
-                                class="card-img" alt="Hospital Management System">
-                            <div class="card-body">
-                                <h5 class="card-title">Hospital Management System</h5>
-                                <p class="card-text">Efficient management of patient records and inventory.</p>
-                                <a href="#contact" class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#hospital_project" aria-expanded="false"
-                                    aria-controls="hospital_project">See More</a>
-                                <div id="hospital_project" class="collapse">
-                                    <p>
-                                        The Hospital Management System is a comprehensive solution designed to manage
-                                        hospital operations, enhance patient care, and streamline administrative tasks.
-                                        It provides a centralized platform for handling patient records, scheduling,
-                                        billing, and inventory management.
-                                    </p>
-                                    <p>
-                                        Key Features:
-                                    <ul>
-                                        <li>Patient registration and appointment scheduling.</li>
-                                        <li>Electronic Medical Records (EMR) management.</li>
-                                        <li>Billing and payment processing with invoicing.</li>
-                                        <li>Pharmacy and inventory management.</li>
-                                        <li>Laboratory and diagnostic report tracking.</li>
-                                        <li>Doctor and staff management modules.</li>
-                                        <li>Bed allocation and ward management.</li>
-                                        <li>Emergency case handling and alerts.</li>
-                                        <li>Data security and role-based access control.</li>
-                                    </ul>
-                                    </p>
-                                    <p>
-                                        This system ensures better patient care, reduces paperwork, and improves the
-                                        efficiency of hospital operations. It supports scalability, real-time data
-                                        access, and secure storage for sensitive medical information.
-                                    </p>
-                                </div>
-                            </div>
+                <!-- Desktop App Development -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="col-12 text-center mb-4">
+                        <h3 class="section-title">🖥️ Desktop App Development <i class="fas fa-desktop"></i></h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <ul class="tech-list">
+                                <li><strong>🧩 Backend:</strong></li>
+                                <hr class="section-hr">
+                                <li class="tech-item"><i class="devicon-java-plain colored"></i> Java</li>
+                                <li class="tech-item"><i class="devicon-cplusplus-plain colored"></i> C++</li>
+                                <li class="tech-item"><i class="devicon-python-plain colored"></i> Python</li>
+                                <li class="tech-item"><i class="devicon-nodejs-plain colored"></i> Node.js</li>
+                                <li class="tech-item"><i class="devicon-docker-plain colored"></i> Docker</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-1 d-flex justify-content-center align-items-center">
+                            <div class="vertical-divider"></div>
+                        </div>
+                        <div class="col-md-5">
+                            <ul class="tech-list">
+                                <li><strong>🎨 Front-End:</strong></li>
+                                <hr class="section-hr">
+                                <li class="tech-item"><i class="devicon-javafx-plain colored"></i> JavaFX / Swing</li>
+                                <li class="tech-item"><i class="devicon-qt-plain colored"></i> Qt</li>
+                                <li class="tech-item"><i class="devicon-electron-original colored"></i> Electron</li>
+                                <li class="tech-item"><i class="devicon-html5-plain colored"></i> HTML5</li>
+                                <li class="tech-item"><i class="devicon-css3-plain colored"></i> CSS3</li>
+                                <li class="tech-item"><i class="devicon-javascript-plain colored"></i> JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Technologies -->
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="col-12 text-center mb-4">
+                        <h3 class="section-title">🛠️ Additional Technologies <i class="fas fa-tools"></i></h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <ul class="tech-list">
+                                <li class="tech-item"><i class="fas fa-network-wired"></i> Data Structures</li>
+                                <li class="tech-item"><i class="fas fa-database"></i> Advanced Database</li>
+                                <li class="tech-item"><i class="fas fa-lock"></i> Software Security</li>
+                                <li class="tech-item"><i class="fas fa-network-wired"></i> Networking Fundamentals</li>
+                                <li class="tech-item"><i class="fas fa-cloud"></i> Cloud Computing</li>
+                                <li class="tech-item"><i class="fas fa-tasks"></i> Requirements Engineering</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-1 d-flex justify-content-center align-items-center">
+                            <div class="vertical-divider"></div>
+                        </div>
+                        <div class="col-md-5">
+                            <ul class="tech-list">
+                                <li class="tech-item"><i class="fas fa-drafting-compass"></i> Architecture & Design</li>
+                                <li class="tech-item"><i class="fas fa-code"></i> Compiler Design</li>
+                                <li class="tech-item"><i class="fas fa-brain"></i> Machine Learning</li>
+                                <li class="tech-item"><i class="fas fa-robot"></i> Artificial Intelligence</li>
+                                <li class="tech-item"><i class="fas fa-project-diagram"></i> Project Management</li>
+                                <li class="tech-item"><i class="fas fa-check-circle"></i> QA & Testing</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <style>
+            /* Base Styles */
+            .tech-card {
+                background: linear-gradient(135deg, #1f1f2e, #2d2d44);
+                border-radius: 10px;
+                padding: 25px;
+                margin-top: 30px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+            }
 
+            .tech-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            }
+
+            .section-title {
+                font-size: 2rem;
+                color: #fff;
+                font-weight: 600;
+                margin-bottom: 1.5rem;
+                letter-spacing: 1px;
+            }
+
+            /* Tech List Styles */
+            .tech-list {
+                list-style: none;
+                padding-left: 0;
+            }
+
+            .tech-list li {
+                font-size: 1.1rem;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+            }
+
+            .tech-item {
+                color: #eee;
+                padding: 8px 0;
+                transition: all 0.3s ease;
+            }
+
+            .tech-item:hover {
+                transform: translateX(5px);
+                color: #3498db;
+            }
+
+            .tech-item i {
+                margin-right: 12px;
+                font-size: 1.4rem;
+                min-width: 25px;
+                transition: color 0.3s ease;
+            }
+
+            .tech-item:hover i {
+                color: #3498db;
+            }
+
+            /* Divider Styles */
+            .section-hr {
+                border: none;
+                height: 2px;
+                background: linear-gradient(90deg, #3498db, transparent);
+                margin: 15px 0 20px;
+            }
+
+            .vertical-divider {
+                border-left: 2px solid rgba(52, 152, 219, 0.3);
+                height: 100%;
+            }
+
+            /* Responsive Adjustments */
+            @media (max-width: 768px) {
+                .vertical-divider {
+                    display: none;
+                }
+
+                .section-title {
+                    font-size: 1.8rem;
+                }
+
+                .tech-list li {
+                    font-size: 1rem;
+                }
+            }
+        </style>
+
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 800,
+                easing: 'ease-out-quart',
+                once: true
+            });
+        </script>
         <!-- Contact Section -->
         <section id="contact" class="py-5" data-aos="zoom-in"
             style="background: linear-gradient(135deg, #000000 0%, #2f3369 100%);">
@@ -462,31 +755,95 @@
                 <!-- First Row for the Contact Form -->
                 <div class="row">
                     <div class="Container">
-                        <div class="col-md-12" data-aos="flip-left">
+                        <div class="col-md-12" data-aos="fade-up" data-aos-duration="1000">
                             <form id="contactForm" onsubmit="sendEmail(); return false;">
-                                <h3></h3>
+                                <h3 class="text-center mb-4 font-weight-bold" data-aos="zoom-in"
+                                    data-aos-duration="1000">Get In Touch
+                                </h3>
+
                                 <!-- Smiley icon using Bootstrap Icons -->
-                                <div class="mb-3">
+                                <div class="mb-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                                     <label for="email" class="form-label">Your Email</label>
                                     <input type="email" id="email" class="form-control" required>
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                                     <label for="message" class="form-label">Message</label>
                                     <textarea id="message" rows="4" class="form-control" required></textarea>
                                 </div>
                                 <div class="mb-3 d-flex justify-content-between">
-                                    <button type="submit" class="btn btn-primary" style="width: 45%;">Send</button>
-                                    <button type="reset" class="btn btn-secondary" style="width: 45%;">Clear</button>
+                                    <button type="submit" class="btn btn-primary" style="width: 45%;" data-aos="zoom-in"
+                                        data-aos-duration="1000" data-aos-delay="600">Send</button>
+                                    <button type="reset" class="btn btn-secondary" style="width: 45%;"
+                                        data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="800">Clear</button>
                                 </div>
                             </form>
 
                             <!-- Placeholder for success message -->
-                            <div id="successMessage" class="text-center text-success" style="display: none;">
+                            <div id="successMessage" class="text-center text-success" style="display: none;"
+                                data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
                                 <h4>Message Sent Successfully!</h4>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- AOS JS -->
+                <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+                <script>
+                    AOS.init(); // Initialize AOS animations
+                </script>
+                <style>
+                    /* For smooth form elements */
+                    input[type="email"],
+                    textarea {
+                        transition: all 0.3s ease;
+                    }
+
+                    /* Input field focus effect */
+                    input[type="email"]:focus,
+                    textarea:focus {
+                        border-color: #00bcd4;
+                        box-shadow: 0 0 10px rgba(0, 188, 212, 0.6);
+                    }
+
+                    /* Button Hover Effect */
+                    .btn:hover {
+                        transform: scale(1.1);
+                        /* Slight zoom effect */
+                        transition: transform 0.3s ease-in-out;
+                    }
+
+                    /* Success message animation */
+                    #successMessage {
+                        font-size: 20px;
+                        font-weight: bold;
+                        animation: fadeInSuccess 1.5s ease-out;
+                    }
+
+                    @keyframes fadeInSuccess {
+                        0% {
+                            opacity: 0;
+                            transform: translateY(20px);
+                        }
+
+                        100% {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+
+                    /* Adjusting the form responsiveness */
+                    @media (max-width: 768px) {
+                        .mb-3 {
+                            margin-bottom: 1rem;
+                        }
+
+                        .btn {
+                            width: 100%;
+                            margin-bottom: 10px;
+                        }
+                    }
+                </style>
+
 
                 <section id="contact" class="py-5" style="background-color: #333; color: #fff;">
                     <div class="container">
@@ -495,6 +852,7 @@
                         <style>
                             /* Contact Heading Styling */
                             .contact-heading {
+                                margin-left: 10%;
                                 font-size: 36px;
                                 /* Bigger text for emphasis */
                                 color: #fff;
@@ -587,7 +945,8 @@
                                     <li class="contact-icon-container mb-3">
                                         <a href="https://www.upwork.com/freelancers/~birekassa" class="contact-icon"
                                             target="_blank">
-                                            <img src="./icon/upwork.png" alt="Upwork" class="contact-icon-img" />
+                                            <i class="fab fa-upwork"></i>
+                                            <!-- <img src="./icon/upwork.png" alt="Upwork" class="contact-icon-img" /> -->
                                         </a>
                                     </li>
                                     <li class="contact-icon-container mb-3">
