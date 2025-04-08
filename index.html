@@ -21,31 +21,115 @@
     <!-- Custom CSS  -->
     <link rel="stylesheet" href="Style.css">
 </head>
-</head>
-
 
 <body class="d-flex flex-column min-vh-100 bg-dark">
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-top: 100px;">
-            <div class="container">
-                <a class="navbar-brand" href="#">Birehanu Kassa</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3" style="margin-top: 50px;">
+            <!-- Social Media Icons Above the Container -->
+            <div class="d-flex justify-content-end w-100 position-absolute" style="top:0;  right: 20%;">
+                <a href="https://github.com/birekassa23" class="text-white mx-3" target="_blank">
+                    <i class="fab fa-github" style="font-size: 24px;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/birekassa" class="text-white mx-3" target="_blank">
+                    <i class="fab fa-linkedin" style="font-size: 24px;"></i>
+                </a>
+                <a href="https://www.upwork.com/freelancers/~birekassa" class="text-white mx-3" target="_blank">
+                    <i class="fab fa-upwork" style="font-size: 24px;"></i>
+                </a>
+            </div>
+
+            <!-- Main Container for Navbar Content -->
+            <div class="container" style="padding-top: 40px;">
+                <!-- Brand Name -->
+                <a class="navbar-brand text-white font-weight-bold" href="#">Birehanu Kassa</a>
+
+                <!-- Navbar Toggle Button for Small Screens -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse bg-dark" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Recent work</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About me</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact me</a></li>
+
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto" style="background-color: #333;">
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-3" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-3" href="#portfolio">Recent Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-3" href="#about">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-3" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-3" href="#contact">Contact Me</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+    <!-- Add these styles to your CSS file or <style> section -->
+    <style>
+        /* Navbar background color */
+        .navbar {
+            background-color: #2f3369;
+            /* Subtle dark blue for a formal look */
+        }
+
+        /* Navbar text hover effects */
+        .nav-link {
+            font-size: 16px;
+            /* Slightly larger font for better readability */
+            text-transform: uppercase;
+            /* Uppercase for formal look */
+            font-weight: 500;
+            /* Semi-bold text for a professional vibe */
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link:focus {
+            color: #00bcd4;
+            /* Elegant cyan color on hover */
+            border-bottom: 2px solid #00bcd4;
+            /* Underline on hover */
+        }
+
+        /* Navbar brand - adding bold and a touch of elegance */
+        .navbar-brand {
+            font-size: 24px;
+            /* Larger font size for the brand name */
+            letter-spacing: 2px;
+            /* Add space between letters for a more refined look */
+        }
+
+        /* Navbar toggler button */
+        .navbar-toggler-icon {
+            background-color: #fff;
+            /* White color for the hamburger menu */
+        }
+
+        /* For mobile views: navbar background and item spacing */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background-color: #2f3369;
+            }
+
+            .navbar-nav {
+                text-align: center;
+            }
+
+            .nav-item {
+                padding: 10px 0;
+            }
+        }
+    </style>
+
 
     <!-- Hero Section -->
     <main>
@@ -57,10 +141,11 @@
                     <div class="col-md-6 text-white"
                         style="background-color: black; margin-top: -50px; padding-top: 10px;">
                         <h2 class="display-5 fw-bold mb-3">Hello 👋<br>I'm Birehanu Kassa</h2>
-                        <h4 class="text-primary mb-3"><b>Software Engineer</b> & <b>Freelancer</b></h4>
+                        <h4 class="text-primary mb-3"><b> Back-End Engineer | Developer</b> & <b
+                                class="text-warning">Freelancer</b></h4>
                         <p class="lead">
                             <i class="fas fa-server text-warning"></i> Focused on building powerful, scalable Back-End
-                            systems 🚀
+                            systems
                         </p>
                         <div class="p-3 rounded" style="background-color: #333;">
                             <h5 class="fw-semibold text-info"><i class="fas fa-user"></i> About Me</h5>
@@ -102,149 +187,134 @@
             </div>
         </section>
 
-        <!-- About Section - Grouped by Related Technologies -->
-        <section id="" class="py-5" data-aos="zoom-in"
-            style="background: linear-gradient(135deg, #000000 0%, #2f3369 100%); color: #333;">
+        <section id="technologies" class="py-5" data-aos="zoom-in"
+            style="background: linear-gradient(135deg, #0f0f0f 0%, #2f3369 100%); color: #fff;">
             <div class="container">
-                <h2 class="text-center mb-4 text-white font-weight-bold">Technologies I Have Used.</h2>
-                <hr class="bg-white">
+                <h2 class="text-center mb-5 font-weight-bold" style="font-size: 2.5rem;">
+                    🚀 Technologies I Have Used
+                </h2>
 
-                <!-- Backend Technologies -->
-                <div class="row py-4 content align-items-center-center">
-                    <div class="col-md-12">
-                        <ul class="list-unstyled text-white">
-                            <div class="row" style="background-color: #333; margin-top: 10%;">
-                                <h2 text-center><i class="fas fa-mobile-alt"></i> Web App Development</h2>
-                                <!-- First Column (4 Contact Icons) -->
-                                <div class="col-md-5">
-                                    <ul>
-                                        <li><strong>Backend Technologies:</strong></li>
-                                        <li>JavaScript (JS)</li>
-                                        <li>TypeScript (TS)</li>
-                                        <li>Node.js</li>
-                                        <li>Express.js</li>
-                                        <li>Next.js</li>
-                                        <li>NestJS</li>
-                                        <li>PHP</li>
-                                        <li><i class="fas fa-database"></i> Fundamentals of Database</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Vertical Line Between Columns -->
-                                <div class="col-md-1 d-flex justify-content-center align-items-center">
-                                    <div style="border-left: 3px solid #fff; height: 100%;"></div>
-                                </div>
-
-                                <!-- Second Column (4 Contact Icons) -->
-                                <div class="col-md-5">
-                                    <ul>
-                                        <li><strong>Front-End Technologies:</strong></li>
-                                        <li>HTML</li>
-                                        <li>CSS</li>
-                                        <li>React</li>
-                                        <li>Angular</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-
-                            <div class="row" style="background-color: #333; margin-top: 10%;">
-                                <h2 text-center><i class="fas fa-mobile-alt"></i> Mobile App Development</h2>
-                                <!-- First Column (4 Contact Icons) -->
-                                <div class="col-md-5">
-                                    <ul>
-                                        <li><strong>Backend Technologies:</strong></li>
-                                        <li><i class="fab fa-java"></i> Advanced Programming (Java)</li>
-                                        <li><i class="fab fa-cuttlefish"></i> C++</li>
-                                        <li><i class="fab fa-java"></i> platter</li>
-                                        <li><i class="fab fa-cuttlefish"></i> electron</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Vertical Line Between Columns -->
-                                <div class="col-md-1 d-flex justify-content-center align-items-center">
-                                    <div style="border-left: 3px solid #fff; height: 100%;"></div>
-                                </div>
-
-                                <!-- Second Column (4 Contact Icons) -->
-                                <div class="col-md-5">
-                                    <ul>
-                                        <li><strong>Front-End Technologies:</strong></li>
-                                        add by your self
-                                    </ul>
-                                </div>
-                            </div>
-
-
-                            <div class="row" style="background-color: #333; margin-top: 10%;">
-                                <h2 text-center><i class="fas fa-mobile-alt"></i> Disctop App Development</h2>
-                                <!-- First Column (4 Contact Icons) -->
-                                <div class="col-md-5">
-                                    <ul>
-                                        <li><strong>Backend Technologies:</strong></li>
-                                        <li><i class="fas fa-object-group"></i> Object-Oriented Programming</li>
-                                        <li><i class="fab fa-java"></i> Advanced Programming (Java)</li>
-                                        <li><i class="fab fa-cuttlefish"></i> C++</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Vertical Line Between Columns -->
-                                <div class="col-md-1 d-flex justify-content-center align-items-center">
-                                    <div style="border-left: 3px solid #fff; height: 100%;"></div>
-                                </div>
-
-                                <!-- Second Column (4 Contact Icons) -->
-                                <div class="col-md-5">
-                                    <ul>
-                                        <li><strong>Front-End Technologies:</strong></li>
-                                        add by your self
-                                    </ul>
-                                </div>
-                            </div>
+                <!-- Web App Development Section -->
+                <div class="row shadow-lg rounded-lg p-4" style="background-color: #1f1f2e; margin-top: 3rem;"
+                    data-aos="fade-up">
+                    <div class="col-12 text-center mb-3">
+                        <h3>🌐 Web App Development <i class="fas fa-globe-code"></i></h3>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="list-unstyled">
+                            <li><strong>🧩 Backend:</strong></li>
+                            <li><i class="devicon-javascript-plain colored"></i> JavaScript (JS)</li>
+                            <li><i class="devicon-typescript-plain colored"></i> TypeScript (TS)</li>
+                            <li><i class="devicon-nodejs-plain colored"></i> Node.js</li>
+                            <li><i class="devicon-express-original-wordmark colored"></i> Express.js</li>
+                            <li><i class="devicon-nextjs-original-wordmark"></i> Next.js</li>
+                            <li><i class="devicon-nestjs-plain colored"></i> NestJS</li>
+                            <li><i class="devicon-php-plain colored"></i> PHP</li>
+                            <li><i class="fas fa-database"></i> Fundamentals of Database</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-1 d-flex justify-content-center align-items-center">
+                        <div style="border-left: 3px solid #aaa; height: 100%;"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="list-unstyled">
+                            <li><strong>🎨 Front-End:</strong></li>
+                            <li><i class="devicon-html5-plain colored"></i> HTML</li>
+                            <li><i class="devicon-css3-plain colored"></i> CSS</li>
+                            <li><i class="devicon-react-original colored"></i> React</li>
+                            <li><i class="devicon-angularjs-plain colored"></i> Angular</li>
                         </ul>
                     </div>
                 </div>
-            </div>
 
-            <div class="container">
-                <div class="row" style="background-color: #333; margin-top: 10%;">
-                    <h2 class="text-center mb-4 text-white font-weight-bold">Additional Technologies I Have.</h2>
-                    <!-- First Column (4 Contact Icons) -->
+                <!-- Mobile App Development Section -->
+                <div class="row shadow-lg rounded-lg p-4" style="background-color: #1f1f2e; margin-top: 3rem;"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-12 text-center mb-3">
+                        <h3>📱 Mobile App Development <i class="fas fa-mobile-alt"></i></h3>
+                    </div>
                     <div class="col-md-5">
-                        <ul>
-                            <ul class="list-unstyled text-white">
-                                <li><i class="fas fa-network-wired"></i> Data Structures</li>
-                                <li><i class="fas fa-database"></i> Advanced Database</li>
-                                <li><i class="fas fa-lock"></i> Fundamentals of Software Security</li>
-                                <li><i class="fas fa-network-wired"></i> Fundamentals of Networking</li>
-                                <li><i class="fas fa-cloud"></i> Fundamentals of Cloud Computing</li>
-                                <li><i class="fas fa-tools"></i> Software Engineering Tools and Practice</li>
-                                <li><i class="fas fa-check-circle"></i> Software Testing and Quality Assurance</li>
-                            </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>🧩 Backend:</strong></li>
+                            <li><i class="devicon-java-plain colored"></i> Java</li>
+                            <li><i class="devicon-cplusplus-plain colored"></i> C++</li>
+                            <li><i class="devicon-flutter-plain colored"></i> Flutter</li>
+                            <li><i class="devicon-electron-original colored"></i> Electron</li>
                         </ul>
                     </div>
-
-                    <!-- Vertical Line Between Columns -->
                     <div class="col-md-1 d-flex justify-content-center align-items-center">
-                        <div style="border-left: 3px solid #fff; height: 100%;"></div>
+                        <div style="border-left: 3px solid #aaa; height: 100%;"></div>
                     </div>
-
-                    <!-- Second Column (4 Contact Icons) -->
                     <div class="col-md-5">
-                        <ul class="list-unstyled text-white">
+                        <ul class="list-unstyled">
+                            <li><strong>🎨 Front-End:</strong></li>
+                            <li>📱 Flutter Widgets</li>
+                            <li>📲 React Native</li>
+                            <li>💡 Hybrid HTML/CSS</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Desktop App Development Section -->
+                <div class="row shadow-lg rounded-lg p-4" style="background-color: #1f1f2e; margin-top: 3rem;"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div class="col-12 text-center mb-3">
+                        <h3>🖥️ Desktop App Development <i class="fas fa-desktop"></i></h3>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="list-unstyled">
+                            <li><strong>🧩 Backend:</strong></li>
+                            <li><i class="devicon-java-plain colored"></i> Java</li>
+                            <li><i class="devicon-cplusplus-plain colored"></i> C++</li>
+                            <li>🧩 Object-Oriented Programming (OOP)</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-1 d-flex justify-content-center align-items-center">
+                        <div style="border-left: 3px solid #aaa; height: 100%;"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="list-unstyled">
+                            <li><strong>🎨 Front-End:</strong></li>
+                            <li>⚙️ JavaFX / Swing</li>
+                            <li>🎛️ Qt</li>
+                            <li>⚡ Electron</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Additional Technologies Section -->
+                <div class="row shadow-lg rounded-lg p-4" style="background-color: #1f1f2e; margin-top: 3rem;"
+                    data-aos="fade-up" data-aos-delay="600">
+                    <div class="col-12 text-center mb-3">
+                        <h3>🧠 Additional Technologies <i class="fas fa-tools"></i></h3>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-network-wired"></i> Data Structures</li>
+                            <li><i class="fas fa-database"></i> Advanced Database</li>
+                            <li><i class="fas fa-lock"></i> Software Security</li>
+                            <li><i class="fas fa-network-wired"></i> Networking Fundamentals</li>
+                            <li><i class="fas fa-cloud"></i> Cloud Computing</li>
+                            <li><i class="fas fa-tools"></i> Engineering Tools</li>
+                            <li><i class="fas fa-check-circle"></i> QA & Testing</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-1 d-flex justify-content-center align-items-center">
+                        <div style="border-left: 3px solid #aaa; height: 100%;"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="list-unstyled">
                             <li><i class="fas fa-tasks"></i> Requirements Engineering</li>
-                            <li><i class="fas fa-drafting-compass"></i> Software Architecture and Design</li>
+                            <li><i class="fas fa-drafting-compass"></i> Architecture & Design</li>
                             <li><i class="fas fa-code"></i> Compiler Design</li>
-                            <li><i class="fas fa-brain"></i> Fundamentals of Machine Learning</li>
-                            <li><i class="fas fa-robot"></i> Fundamentals of Artificial Intelligence</li>
-                            <li><i class="fas fa-project-diagram"></i> Software Project Management</li>
+                            <li><i class="fas fa-brain"></i> Machine Learning</li>
+                            <li><i class="fas fa-robot"></i> Artificial Intelligence</li>
+                            <li><i class="fas fa-project-diagram"></i> Project Management</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-
-
 
 
 
@@ -391,74 +461,122 @@
 
                 <!-- First Row for the Contact Form -->
                 <div class="row">
-                    <div class="col-md-12" data-aos="flip-left">
-                        <form id="contactForm" onsubmit="sendEmail(); return false;">
-                            <h3></h3>
-                            <!-- Smiley icon using Bootstrap Icons -->
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Your Email</label>
-                                <input type="email" id="email" class="form-control" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea id="message" rows="4" class="form-control" required></textarea>
-                            </div>
-                            <div class="mb-3 d-flex justify-content-between">
-                                <button type="submit" class="btn btn-primary" style="width: 45%;">Send</button>
-                                <button type="reset" class="btn btn-secondary" style="width: 45%;">Clear</button>
-                            </div>
-                        </form>
+                    <div class="Container">
+                        <div class="col-md-12" data-aos="flip-left">
+                            <form id="contactForm" onsubmit="sendEmail(); return false;">
+                                <h3></h3>
+                                <!-- Smiley icon using Bootstrap Icons -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Your Email</label>
+                                    <input type="email" id="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea id="message" rows="4" class="form-control" required></textarea>
+                                </div>
+                                <div class="mb-3 d-flex justify-content-between">
+                                    <button type="submit" class="btn btn-primary" style="width: 45%;">Send</button>
+                                    <button type="reset" class="btn btn-secondary" style="width: 45%;">Clear</button>
+                                </div>
+                            </form>
 
-                        <!-- Placeholder for success message -->
-                        <div id="successMessage" class="text-center text-success" style="display: none;">
-                            <h4>Message Sent Successfully!</h4>
+                            <!-- Placeholder for success message -->
+                            <div id="successMessage" class="text-center text-success" style="display: none;">
+                                <h4>Message Sent Successfully!</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Second Row for Contact Icons -->
-                <div class="row" style="background-color: #333; margin-top: 10%;">
-                    <h2 class="text-center mb-4 ">Contact me</h2>
-                    <!-- First Column (4 Contact Icons) -->
-                    <div class="col-md-5">
-                        <ul class="contact-list list-unstyled text-center">
-                            <li><i class="fas fa-mobile-alt" style="font-size: 40px;"></i> <a
-                                    href="tel:+251917828062"></a></li>
-                            <li><i class="fas fa-envelope" style="font-size: 40px;"></i> <a
-                                    href="mailto:birekassa17828062@gmail.com"></a></li>
-                            <li><i class="fab fa-telegram" style="font-size: 40px;"></i> <a
-                                    href="https://t.me/birekassa"></a></li>
-                            <li><i class="fab fa-whatsapp" style="font-size: 40px;"></i> <a
-                                    href="https://wa.me/25193567890"></a></li>
-                        </ul>
-                    </div>
+                <section id="contact" class="py-5" style="background-color: #333; color: #fff;">
+                    <div class="container">
+                        <h2 class="text-center mb-4 font-weight-bold">📞 Contact Me</h2>
 
-                    <!-- Vertical Line Between Columns -->
-                    <div class="col-md-1 d-flex justify-content-center align-items-center">
-                        <div style="border-left: 3px solid #fff; height: 100%;"></div>
-                    </div>
+                        <!-- Contact Icons Row -->
+                        <div class="row" style="margin-top: 10%;">
 
-                    <!-- Second Column (4 Contact Icons) -->
-                    <div class="col-md-5">
-                        <ul class="contact-list list-unstyled text-center">
-                            <li><i class="fas fa-link" style="font-size: 40px;"></i> <a
-                                    href="https://www.linkedin.com/in/birekassa" target="_blank"></a></li>
-                            <li><i class="fas fa-upwork" style="font-size: 40px;"></i> <a
-                                    href="https://Upwork.com/birekassa" target="_blank"></a></li>
-                            <li><i class="fab fa-github" style="font-size: 40px;"></i> <a
-                                    href="https://github.com/birekassa23" target="_blank"></a></li>
-                            <li><i class="fas fa-twitter" style="font-size: 40px;"></i> <a
-                                    href="https://twitter.com/birekassa" target="_blank"></a></li>
-                        </ul>
-                    </div>
-                </div>
+                            <!-- First Column (Phone, Email, Telegram, WhatsApp) -->
+                            <div class="col-md-5">
+                                <ul class="contact-list list-unstyled text-center">
+                                    <li class="btn-primary">
+                                        <a href="tel:+251917828062" class="contact-icon">
+                                            <i class="fas fa-mobile-alt" style="font-size: 40px;"></i>
+                                        </a>
+                                    </li>
+                                    <li class="btn-primary">
+                                        <a href="mailto:birekassa17828062@gmail.com" class="contact-icon">
+                                            <i class="fas fa-envelope" style="font-size: 40px;"></i>
+                                        </a>
+                                    </li>
+                                    <li class="btn-primary">
+                                        <a href="https://t.me/birekassa" class="contact-icon" target="_blank">
+                                            <i class="fab fa-telegram" style="font-size: 40px;"></i>
+                                        </a>
+                                    </li>
+                                    <li class="btn-primary">
+                                        <a href="https://wa.me/25193567890" class="contact-icon" target="_blank">
+                                            <i class="fab fa-whatsapp" style="font-size: 40px;"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
 
+                            <!-- Vertical Line Between Columns -->
+                            <div class="col-md-1 d-flex justify-content-center align-items-center">
+                                <div style="border-left: 3px solid #fff; height: 100%;"></div>
+                            </div>
+
+                            <!-- Second Column (LinkedIn, Upwork, GitHub, Twitter) -->
+                            <div class="col-md-5">
+                                <ul class="contact-list list-unstyled text-center">
+                                    <li class="btn-primary">
+                                        <a href="https://www.linkedin.com/in/birekassa" class="contact-icon"
+                                            target="_blank">
+                                            <i class="fab fa-linkedin" style="font-size: 40px;"></i>
+                                        </a>
+                                    </li>
+                                    <li class="btn-primary">
+                                        <a href="https://www.upwork.com/freelancers/~birekassa" class="contact-icon"
+                                            target="_blank">
+                                            <img src="./icon/upwork.png" alt="Upwork"
+                                                style="width: 40px; height: auto; background-color: #fff; padding: 5px;" />
+                                        </a>
+                                    </li>
+
+                                    <li class="btn-primary">
+                                        <a href="https://github.com/birekassa23" class="contact-icon" target="_blank">
+                                            <i class="fab fa-github" style="font-size: 40px;"></i>
+                                        </a>
+                                    </li>
+                                    <li class="btn-primary">
+                                        <a href="https://twitter.com/birekassa" class="contact-icon" target="_blank">
+                                            <i class="fab fa-twitter" style="font-size: 40px;"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </section>
-
-
-
     </main>
+    <style>
+        .contact-icon {
+            color: #fff;
+            transition: transform 0.3s ease-in-out, color 0.3s ease;
+        }
+
+        .contact-icon:hover {
+            transform: scale(1.2);
+            color: #00bcd4;
+            /* Change to your preferred hover color */
+        }
+
+        .contact-list li {
+            margin-bottom: 15px;
+        }
+    </style>
 
     <!-- Footer -->
     <footer class="text-center py-3 bg-dark text-white">
