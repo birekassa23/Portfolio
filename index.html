@@ -490,30 +490,79 @@
 
                 <section id="contact" class="py-5" style="background-color: #333; color: #fff;">
                     <div class="container">
-                        <h2 class="text-center mb-4 font-weight-bold">📞 Contact Me</h2>
+                        <h2 class="contact-heading text-center mb-4 font-weight-bold">📞 Contact Me</h2>
 
+                        <style>
+                            /* Contact Heading Styling */
+                            .contact-heading {
+                                font-size: 36px;
+                                /* Bigger text for emphasis */
+                                color: #fff;
+                                /* White text for contrast */
+                                text-transform: uppercase;
+                                /* Uppercase for a formal and modern touch */
+                                letter-spacing: 2px;
+                                /* Space out letters for a clean look */
+                                position: relative;
+                                animation: fadeInUp 1s ease-out, glowEffect 1.5s ease-in-out infinite alternate;
+                                display: inline-block;
+                            }
+
+                            /* Animation for Heading */
+                            @keyframes fadeInUp {
+                                0% {
+                                    opacity: 0;
+                                    transform: translateY(30px);
+                                }
+
+                                100% {
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                }
+                            }
+
+                            /* Glow Effect Animation */
+                            @keyframes glowEffect {
+                                0% {
+                                    text-shadow: 0 0 10px rgba(0, 188, 212, 0.5), 0 0 20px rgba(0, 188, 212, 0.6), 0 0 30px rgba(0, 188, 212, 0.7);
+                                }
+
+                                100% {
+                                    text-shadow: 0 0 15px rgba(0, 188, 212, 1), 0 0 25px rgba(0, 188, 212, 1), 0 0 35px rgba(0, 188, 212, 0.8);
+                                }
+                            }
+
+                            /* Adding hover effect */
+                            .contact-heading:hover {
+                                color: #00bcd4;
+                                /* Cyan color change on hover */
+                                transform: scale(1.05);
+                                /* Slight grow effect */
+                                transition: all 0.3s ease;
+                                /* Smooth transition */
+                            }
+                        </style>
                         <!-- Contact Icons Row -->
-                        <div class="row" style="margin-top: 10%;">
-
+                        <div class="row" style="margin-top: 5%;">
                             <!-- First Column (Phone, Email, Telegram, WhatsApp) -->
                             <div class="col-md-5">
                                 <ul class="contact-list list-unstyled text-center">
-                                    <li class="btn-primary">
+                                    <li class="contact-icon-container mb-3">
                                         <a href="tel:+251917828062" class="contact-icon">
                                             <i class="fas fa-mobile-alt" style="font-size: 40px;"></i>
                                         </a>
                                     </li>
-                                    <li class="btn-primary">
+                                    <li class="contact-icon-container mb-3">
                                         <a href="mailto:birekassa17828062@gmail.com" class="contact-icon">
                                             <i class="fas fa-envelope" style="font-size: 40px;"></i>
                                         </a>
                                     </li>
-                                    <li class="btn-primary">
+                                    <li class="contact-icon-container mb-3">
                                         <a href="https://t.me/birekassa" class="contact-icon" target="_blank">
                                             <i class="fab fa-telegram" style="font-size: 40px;"></i>
                                         </a>
                                     </li>
-                                    <li class="btn-primary">
+                                    <li class="contact-icon-container mb-3">
                                         <a href="https://wa.me/25193567890" class="contact-icon" target="_blank">
                                             <i class="fab fa-whatsapp" style="font-size: 40px;"></i>
                                         </a>
@@ -529,55 +578,90 @@
                             <!-- Second Column (LinkedIn, Upwork, GitHub, Twitter) -->
                             <div class="col-md-5">
                                 <ul class="contact-list list-unstyled text-center">
-                                    <li class="btn-primary">
+                                    <li class="contact-icon-container mb-3">
                                         <a href="https://www.linkedin.com/in/birekassa" class="contact-icon"
                                             target="_blank">
-                                            <i class="fab fa-linkedin" style="font-size: 40px;"></i>
+                                            <i class="fab fa-linkedin"></i>
                                         </a>
                                     </li>
-                                    <li class="btn-primary">
+                                    <li class="contact-icon-container mb-3">
                                         <a href="https://www.upwork.com/freelancers/~birekassa" class="contact-icon"
                                             target="_blank">
-                                            <img src="./icon/upwork.png" alt="Upwork"
-                                                style="width: 40px; height: auto; background-color: #fff; padding: 5px;" />
+                                            <img src="./icon/upwork.png" alt="Upwork" class="contact-icon-img" />
                                         </a>
                                     </li>
-
-                                    <li class="btn-primary">
+                                    <li class="contact-icon-container mb-3">
                                         <a href="https://github.com/birekassa23" class="contact-icon" target="_blank">
-                                            <i class="fab fa-github" style="font-size: 40px;"></i>
+                                            <i class="fab fa-github"></i>
                                         </a>
                                     </li>
-                                    <li class="btn-primary">
+                                    <li class="contact-icon-container mb-3">
                                         <a href="https://twitter.com/birekassa" class="contact-icon" target="_blank">
-                                            <i class="fab fa-twitter" style="font-size: 40px;"></i>
+                                            <i class="fab fa-twitter"></i>
                                         </a>
                                     </li>
                                 </ul>
+                                <style>
+                                    /* Contact Icon Container Styling */
+                                    .contact-icon-container {
+                                        display: inline-block;
+                                        margin: 10px;
+                                        padding: 15px;
+                                        background-color: #444;
+                                        /* Same background for all icons */
+                                        border-radius: 50%;
+                                        /* Circular button shape */
+                                        transition: all 0.3s ease;
+                                        width: 60px;
+                                        /* Fixed size */
+                                        height: 60px;
+                                        /* Fixed size */
+                                        text-align: center;
+                                        line-height: 60px;
+                                        /* Vertically center the content */
+                                    }
+
+                                    /* Hover Effects */
+                                    .contact-icon-container:hover {
+                                        background-color: #00bcd4;
+                                        /* Cyan on hover */
+                                        transform: translateY(-5px);
+                                        /* Slight lift effect */
+                                        box-shadow: 0 4px 10px rgba(0, 188, 212, 0.4);
+                                        /* Shadow on hover */
+                                    }
+
+                                    /* Icon styling */
+                                    .contact-icon i {
+                                        color: #fff;
+                                        font-size: 30px;
+                                        /* Icon size */
+                                    }
+
+                                    .contact-icon-img {
+                                        background-color: #fff;
+                                        border-radius: 50%;
+                                        padding: 5px;
+                                        width: 40px;
+                                        height: 40px;
+                                        object-fit: contain;
+                                        /* Keeps aspect ratio */
+                                    }
+
+                                    /* Optional: smooth transition for hover effect */
+                                    .contact-icon-container,
+                                    .contact-icon-container img {
+                                        transition: all 0.3s ease;
+                                    }
+                                </style>
                             </div>
                         </div>
                     </div>
                 </section>
+
             </div>
         </section>
     </main>
-    <style>
-        .contact-icon {
-            color: #fff;
-            transition: transform 0.3s ease-in-out, color 0.3s ease;
-        }
-
-        .contact-icon:hover {
-            transform: scale(1.2);
-            color: #00bcd4;
-            /* Change to your preferred hover color */
-        }
-
-        .contact-list li {
-            margin-bottom: 15px;
-        }
-    </style>
-
     <!-- Footer -->
     <footer class="text-center py-3 bg-dark text-white">
         <p>&copy; 2024 Birehanu Kassa. All rights reserved.</p>
