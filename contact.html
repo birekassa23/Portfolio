@@ -1,0 +1,166 @@
+<!-- contact.html file -->
+
+<!-- Contact Section -->
+<section id="contact" class="py-5" data-aos="zoom-in"
+    style="background: linear-gradient(135deg, #000000 0%, #2f3369 100%);">
+    <div class="container">
+        <h2 class="text-center mb-4 text-primary">I Value Your Feedback <i class="bi bi-emoji-smile"></i></h2>
+        <hr>
+
+        <!-- First Row for the Contact Form -->
+        <div class="row">
+            <div class="Container">
+                <div class="col-md-12" data-aos="fade-up" data-aos-duration="1000">
+                    <form id="contactForm" onsubmit="sendEmail(); return false;">
+                        <h3 class="text-center mb-4 font-weight-bold" data-aos="zoom-in" data-aos-duration="1000">Get In
+                            Touch
+                        </h3>
+
+                        <!-- Smiley icon using Bootstrap Icons -->
+                        <div class="mb-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" rows="4" class="form-control" required></textarea>
+                        </div>
+                        <div class="mb-3 d-flex justify-content-between">
+                            <button type="submit" class="btn btn-primary" style="width: 45%;" data-aos="zoom-in"
+                                data-aos-duration="1000" data-aos-delay="600">Send</button>
+                            <button type="reset" class="btn btn-secondary" style="width: 45%;" data-aos="zoom-in"
+                                data-aos-duration="1000" data-aos-delay="800">Clear</button>
+                        </div>
+                    </form>
+
+                    <!-- Placeholder for success message -->
+                    <div id="successMessage" class="text-center text-success" style="display: none;" data-aos="fade-up"
+                        data-aos-duration="1000" data-aos-delay="1000">
+                        <h4>Message Sent Successfully!</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- AOS JS -->
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    </div>
+</section>
+<section id="contact" class="py-5" style="background-color: #333; color: #fff;">
+    <div class="container">
+        <h2 class="contact-heading text-center mb-4 font-weight-bold">📞 Contact Me</h2>
+
+        <style>
+            /* Contact Heading Styling */
+            .contact-heading {
+                margin-left: 10%;
+                font-size: 36px;
+                /* Bigger text for emphasis */
+                color: #fff;
+                /* White text for contrast */
+                text-transform: uppercase;
+                /* Uppercase for a formal and modern touch */
+                letter-spacing: 2px;
+                /* Space out letters for a clean look */
+                position: relative;
+                animation: fadeInUp 1s ease-out, glowEffect 1.5s ease-in-out infinite alternate;
+                display: inline-block;
+            }
+
+            /* Animation for Heading */
+            @keyframes fadeInUp {
+                0% {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Glow Effect Animation */
+            @keyframes glowEffect {
+                0% {
+                    text-shadow: 0 0 10px rgba(0, 188, 212, 0.5), 0 0 20px rgba(0, 188, 212, 0.6), 0 0 30px rgba(0, 188, 212, 0.7);
+                }
+
+                100% {
+                    text-shadow: 0 0 15px rgba(0, 188, 212, 1), 0 0 25px rgba(0, 188, 212, 1), 0 0 35px rgba(0, 188, 212, 0.8);
+                }
+            }
+
+            /* Adding hover effect */
+            .contact-heading:hover {
+                color: #00bcd4;
+                /* Cyan color change on hover */
+                transform: scale(1.05);
+                /* Slight grow effect */
+                transition: all 0.3s ease;
+                /* Smooth transition */
+            }
+        </style>
+        <!-- Contact Icons Row -->
+        <div class="row" style="margin-top: 5%;">
+            <!-- First Column (Phone, Email, Telegram, WhatsApp) -->
+            <div class="col-md-5">
+                <ul class="contact-list list-unstyled text-center">
+                    <li class="contact-icon-container mb-3">
+                        <a href="tel:+251917828062" class="contact-icon">
+                            <i class="fas fa-mobile-alt" style="font-size: 40px;"></i>
+                        </a>
+                    </li>
+                    <li class="contact-icon-container mb-3">
+                        <a href="mailto:birekassa17828062@gmail.com" class="contact-icon">
+                            <i class="fas fa-envelope" style="font-size: 40px;"></i>
+                        </a>
+                    </li>
+                    <li class="contact-icon-container mb-3">
+                        <a href="https://t.me/birekassa" class="contact-icon" target="_blank">
+                            <i class="fab fa-telegram" style="font-size: 40px;"></i>
+                        </a>
+                    </li>
+                    <li class="contact-icon-container mb-3">
+                        <a href="https://wa.me/25193567890" class="contact-icon" target="_blank">
+                            <i class="fab fa-whatsapp" style="font-size: 40px;"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Vertical Line Between Columns -->
+            <div class="col-md-1 d-flex justify-content-center align-items-center">
+                <div style="border-left: 3px solid #fff; height: 100%;"></div>
+            </div>
+
+            <!-- Second Column (LinkedIn, Upwork, GitHub, Twitter) -->
+            <div class="col-md-5">
+                <ul class="contact-list list-unstyled text-center">
+                    <li class="contact-icon-container mb-3">
+                        <a href="https://www.linkedin.com/in/birekassa" class="contact-icon" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="contact-icon-container mb-3">
+                        <a href="https://www.upwork.com/freelancers/~birekassa" class="contact-icon" target="_blank">
+                            <i class="fab fa-upwork"></i>
+                            <!-- <img src="./icon/upwork.png" alt="Upwork" class="contact-icon-img" /> -->
+                        </a>
+                    </li>
+                    <li class="contact-icon-container mb-3">
+                        <a href="https://github.com/birekassa23" class="contact-icon" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="contact-icon-container mb-3">
+                        <a href="https://twitter.com/birekassa" class="contact-icon" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</section>

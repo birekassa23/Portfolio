@@ -1,378 +1,52 @@
-/* === General Styles === */
+/* style.css */
+
+/* Hero Section Glow */
+.about-box {
+    background: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 150, 255, 0.2);
+}
+
+/* Reusable Glow Button */
+.btn-glow {
+    box-shadow: 0 0 10px rgba(0, 150, 255, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.7);
+}
+
+/* Particle Decorations */
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+/* Optional Typography Tweaks */
 body {
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.icons-container {
-    font-size: 1rem;
-    color: #555;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
-/* === Navigation Styles === */
-.navbar {
-    height: 100px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
-}
-.navbar-collapse {
-    z-index: 999;
-    padding-left: 10%;
-}
-/* Navbar Links Styling */
-.navbar-nav .nav-item {
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 5%;
-    transition: all 0.3s ease; /* Smooth transition on hover and active */
-    
-}
-
-/* Active Link */
-.navbar-nav .nav-item .nav-link.active {
-    color: white !important; /* Blue color for active link */
-    font-weight: bold; /* Bold font for active */
-    border-bottom: 2px solid #007bff; /* Add a blue border under active item */
+body.light-mode {
+    background-color: #f8f9fa;
+    color: #212529;
 }
 
 
-
-.navbar-nav .nav-item .nav-link:hover {
-    color:white;
-    transform: scale(1.1); /* Slight scaling effect for hover */
-}
-
-/* Navbar Toggler Animation */
-.navbar-toggler {
-    transition: all 0.3s ease;
+body.light-mode .hero,
+body.light-mode section {
+    background-color: #ffffff !important;
+    color: #212529 !important;
 }
 
 
-/* On Collapse */
-.navbar-collapse.collapsing {
-    opacity: 0;
-    transform: scale(0.9); /* Scale down for collapse animation */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.navbar-collapse.show {
-    opacity: 1;
-    transform: scale(1); /* Scale back to original size */
-}
-
-
-/* Styling for when the Navbar is fully expanded */
-.navbar-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.navbar-nav .nav-item {
-    margin-right: 20px; /* Space between each item */
-}
-
-/* Small screen adjustments */
-@media (max-width: 991px) {
-    .navbar-nav {
-        text-align: center; /* Center align the items in mobile view */
-    }
-    .navbar-nav .nav-item {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-}
-
-
-
-/* === Hero Section === */
-.hero {
-    background: url('https://wallpaperaccess.com/full/3239480.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
-    padding: 100px 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.hero p.lead {
-    font-size: 1.25rem;
-}
-
-.hero .btn-primary {
-    font-size: 1.25rem;
-    padding: 0.75rem 1.5rem;
-}
-
-.hero img {
-    max-height: 300px;
-    object-fit: cover;
-}
-
-
-
-/* === Icons and Specific Sections === */
-.services-icon {
-    font-size: 2rem;
-    color: #007bff;
-}
-
-
-
-/* === Experiences Icons === */
-.experiences-icon {
-    font-size: 2rem;
-    margin-right: 10px;
-    vertical-align: middle;
-    color: #555;
-}
-
-.experiences-icon:hover {
-    color: #ff4081;
-    transform: scale(1.1);
-}
-
-
-
-/* Specific Icon Colors */
-.web-dev-icon {
-    color: #4CAF50;
-}
-
-.desktop-app-icon {
-    color: #9E9E9E;
-}
-
-.android-app-icon {
-    color: #A4C639;
-}
-
-.front-end-icon {
-    color: #61DAFB;
-}
-
-.back-end-icon {
-    color: #FF5722;
-}
-
-/* Original Colors for Icons */
-.html-icon {
-    color: #E34F26;
-}
-
-.css-icon {
-    color: #1572B6;
-}
-
-.js-icon {
-    color: #F7DF1E;
-}
-
-.react-icon {
-    color: #61DAFB;
-}
-
-.bootstrap-icon {
-    color: #7952B3;
-}
-
-.php-icon {
-    color: #777BB4;
-}
-
-.java-icon {
-    color: #007396;
-}
-
-.python-icon {
-    color: #3776AB;
-}
-
-/* === Skills and Experience Items === */
-.experience-item,.skill-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 16px;
-    line-height: 1.5;
-}
-
-.experience-detail p,.skill-item span {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: #333;
-}
-
-.skills-icon,.experiences-icon {
-    font-size: 2rem;
-    margin-right: 10px;
-    flex-shrink: 0;
-    height: auto;
-}
-
-.skills-icon:hover,.experiences-icon:hover {
-    transform: scale(1.2);
-}
-
-
-/* Contact List */
-.contact-list {
-    padding: 15px;
-    border-radius: 8px;
-    list-style: none;
-    max-height: 400px; /* Optional: Limits the height of the section */
-}
-
-/* List Items */
-.contact-list li {
-    white-space: nowrap; /* Prevents text wrapping */
-    margin-bottom: 10px;
-}
-
-/* Anchor Tags */
-.contact-list a {
-    text-decoration: none;
-    font-size: calc(1rem + 0.2vw); /* Dynamic font size */
-    color: #333; /* Default color */
-    transition: color 0.3s ease;
-}
-
-.contact-list a:hover {
-    color: #007bff; /* Highlight color on hover */
-}
-
-/* Responsive Font Adjustments */
-@media (max-width: 768px) {
-    .contact-list a {
-        font-size: 0.7rem; /* Adjust for smaller screens */
-    }
-}
-
-@media (min-width: 1200px) {
-    .contact-list a {
-        font-size: 1.2rem; /* Adjust for larger screens */
-    }
-}
-
-
-
-
-
-
-/* === Responsive Media Queries === */
-@media (max-width: 767px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero img {
-        width: 80%;
-        margin-top: 20px;
-    }
-
-    .hero .text-md-end {
-        text-align: center;
-    }
-
-    .icons-container {
-        font-size: 0.9rem;
-    }
-
-    .skills-icon,
-    .experiences-icon {
-        font-size: 1.6rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .experience-detail p,
-    .skills-icon {
-        font-size: 1rem;
-    }
-
-    #about h2 {
-        font-size: 2rem;
-    }
-}
-
-
-
-  /* === Smooth Transition for Navigation === */
-  .navbar-nav .nav-link {
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-    transform: scale(1.1);
-    color: #f0ad4e;
-}
-
-/* === Sine Wave Animation for Hero Section === */
-@keyframes sineWave {
-    0% {
-        transform: translateX(-10px);
-    }
-
-    50% {
-        transform: translateX(10px);
-    }
-
-    100% {
-        transform: translateX(-10px);
-    }
-}
-
-.hero img {
-    animation: sineWave 3s ease-in-out infinite;
-}
-
-/* === Hover Effects on Cards === */
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* === Parallax Effect on Background === */
-.parallax {
-    background-image: url('your-background-image.jpg');
-    height: 100vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* === Animating Contact Form Fields === */
-.form-label, .form-control {
-    transition: transform 0.3s ease;
-}
-
-.form-label:hover, .form-control:focus {
-    transform: scale(1.05);
-}
-
-/* === Section Scroll Animations === */
-.section {
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
-}
-
-.section.visible {
-    opacity: 1;
-}
-
-
-#contact {
+body.light-mode .btn-outline-light:hover {
+    background-color: #212529;
     color: white;
 }
-#contact a {
-    color: white;
-}
-
