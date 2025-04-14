@@ -1,6 +1,108 @@
-<!-- about.html -->
-<div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
-    <a href="bire_kassa - resume.pdf" download="My_Resume.pdf">
-        <button>Download CV</button>
-    </a>
+<div class="container-fluid">
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="text-uppercase font-weight-bold mb-4" style="font-size: 2.5rem; color: #FFD700;">
+                About Me
+            </h2>
+            <p style="font-size: 1.1rem; color: #f1f1f1; line-height: 1.6;">
+                Hi! I'm <b>Birehanu Kassa</b>, a Software Engineering student at Mizan Teppi University. Passionate
+                about coding, designing, and problem-solving, I'm on a continuous journey of learning and growing in the
+                tech field. Based in Addis Ababa, Ethiopia, I have experience in C#, .NET WinForms, and web technologies
+                like HTML, CSS, and PHP.
+                <br><br>
+                My notable projects include an Employee Management System, a hotel website, and a Global Education App
+                designed to assist students with study opportunities worldwide. Outside of work, I enjoy exploring tech
+                trends, writing blogs about programming, and sipping tea.
+            </p>
+
+            <!-- Social Media Links -->
+            <div class="social-links my-4" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="100">
+                <a href="https://github.com/zuhaibkacho14" target="_blank" class="social-icon"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.tiktok.com/@aboutcoding_zhk" target="_blank" class="social-icon"><i
+                        class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.linkedin.com/in/kacho-zuhaib-hassan-292b9a2b4/" target="_blank"
+                    class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@aboutCoding-zhk" target="_blank" class="social-icon"><i
+                        class="fa-brands fa-youtube"></i></a>
+            </div>
+
+            <!-- CV Download Section -->
+            <div class="btn mb-4">
+                <a href="assets/cv/bire_kassa - resume.pdf" download="My_Resume.pdf">
+                    <button class="btn btn-primary btn-lg shadow-lg hover-zoom">Download CV</button>
+                </a>
+            </div>
+
+            <!-- Preview CV Section -->
+            <div class="text-center">
+                <button class="btn btn-outline-light btn-lg shadow hover-zoom" data-bs-toggle="modal"
+                    data-bs-target="#cvModal">
+                    <i class="fas fa-eye me-2"></i> Preview CV
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap Modal for Resume Preview -->
+    <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cvModalLabel"><i class="fas fa-file-alt me-2"></i> My Resume</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="assets/cv/bire_kassa - resume.pdf" width="100%" height="600px"
+                        style="border: none;"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <a href="assets/cv/bire_kassa - resume.pdf" download="My_Resume.pdf" class="btn btn-success">
+                        <i class="fas fa-download me-2"></i> Download CV
+                    </a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- Additional Styles for hover and layout -->
+<style>
+    .social-icon {
+        font-size: 2rem;
+        margin: 0 10px;
+        color: #f1f1f1;
+        transition: color 0.3s ease;
+    }
+
+    .social-icon:hover {
+        color: #FFD700;
+    }
+
+    .hover-zoom:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .btn-outline-light {
+        border-color: #fff;
+        color: #fff;
+    }
+
+    .btn-outline-light:hover {
+        background-color: #FFD700;
+        border-color: #FFD700;
+        color: #333;
+    }
+
+    /* Ensure smooth mobile experience */
+    @media (max-width: 768px) {
+        .social-icon {
+            font-size: 1.5rem;
+            margin: 0 8px;
+        }
+    }
+</style>

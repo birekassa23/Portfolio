@@ -30,6 +30,7 @@
 /* Optional Typography Tweaks */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff !important;
 }
 
 
@@ -49,4 +50,135 @@ body.light-mode section {
 body.light-mode .btn-outline-light:hover {
     background-color: #212529;
     color: white;
+}
+
+/* Hero Section Glow */
+.about-box {
+    background: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 150, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 150, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.about-box:hover {
+    background: rgba(30, 30, 30, 0.9);
+    box-shadow: 0 8px 15px rgba(0, 150, 255, 0.5);
+}
+
+/* Reusable Glow Button */
+.btn-glow {
+    box-shadow: 0 0 10px rgba(0, 150, 255, 0.5);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+/* Particle Decorations */
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(0, 150, 255, 0.5);
+    animation: particleAnimation 10s infinite;
+}
+
+@keyframes particleAnimation {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(50px, 50px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(100px, 100px);
+        opacity: 0;
+    }
+}
+
+/* Typography Tweaks */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff !important;
+    color: #212529;
+}
+
+body.dark-mode {
+    background-color: #212529;
+    color: #f1f1f1;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Links and Buttons */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Button with outline on hover */
+body.light-mode .btn-outline-light:hover {
+    background-color: #212529;
+    color: white;
+}
+
+/* Footer Links */
+footer .social-links a {
+    color: #fff;
+    transition: transform 0.2s ease;
+}
+
+footer .social-links a:hover {
+    transform: scale(1.1);
+    color: #007bff;
+}
+
+/* Overall Page Styling */
+body {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2,
+h3,
+h4 {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+h2 {
+    color: #ffd700;
+    font-size: 2.5rem;
+}
+
+h3 {
+    color: #17a2b8;
+}
+
+h4 {
+    color: #f39c12;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
 }
