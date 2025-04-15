@@ -1,61 +1,71 @@
 <div class="container-fluid">
     <section id="services" class="py-5 bg-dark text-white">
         <div class="container">
-            <h2 class="text-center mb-5 font-weight-bold"
-                style="font-size: 3rem; text-transform: uppercase; letter-spacing: 2px; font-family: 'Arial', sans-serif;">
+            <h2 class="text-center mb-5 fw-bold text-uppercase"
+                style="font-size: 3rem; letter-spacing: 2px; font-family: 'Arial', sans-serif;">
                 You Can Get These Services
             </h2>
 
-            <!-- Web App Development -->
-            <div class="tech-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-12 text-center mb-4">
-                    <h3 class="section-title" style="font-size: 2rem; font-weight: bold; color: #FFD700;">
-                        🌐 Web App Development <i class="fas fa-globe"></i>
-                    </h3>
-                    <p style="font-size: 1.1rem; color: #f1f1f1;">
-                        I create dynamic, responsive, and highly interactive web applications tailored to your business
-                        needs.
-                        From custom solutions to full-stack apps, I use the latest technologies like React, Node.js, and
-                        MongoDB.
-                    </p>
-                </div>
-            </div>
+            <div class="row justify-content-center g-4">
 
-            <!-- Mobile App Development -->
-            <div class="tech-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="col-12 text-center mb-4">
-                    <h3 class="section-title" style="font-size: 2rem; font-weight: bold; color: #FFD700;">
-                        📱 Mobile App Development <i class="fas fa-mobile-alt"></i>
-                    </h3>
-                    <p style="font-size: 1.1rem; color: #f1f1f1;">
-                        Build native and cross-platform mobile applications using Flutter, React Native, or native
-                        technologies
-                        like Swift and Kotlin. Whether you need iOS, Android, or both, I bring your app ideas to life!
-                    </p>
+                <!-- Web App Development -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card p-4 text-center h-100 bg-secondary rounded-4 shadow-sm">
+                        <h3 class="text-warning fw-bold fs-4 mb-2">🌐 Web App Development</h3>
+                        <p class="text-light">
+                            I can create dynamic, responsive, and interactive web apps tailored to your needs using
+                            technologies like
+                            <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>. Whether it's
+                            a landing page or a full-stack platform – I deliver clean, scalable code.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Desktop App Development -->
-            <div class="tech-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="col-12 text-center mb-4">
-                    <h3 class="section-title" style="font-size: 2rem; font-weight: bold; color: #FFD700;">
-                        🖥️ Desktop App Development <i class="fas fa-desktop"></i>
-                    </h3>
-                    <p style="font-size: 1.1rem; color: #f1f1f1;">
-                        Offering cross-platform desktop applications with technologies like Electron.js, Java, and C++.
-                        Build
-                        lightweight, powerful desktop apps that run seamlessly on Windows, Mac, and Linux.
-                    </p>
+                <!-- Mobile App Development -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card p-4 text-center h-100 bg-secondary rounded-4 shadow-sm">
+                        <h3 class="text-warning fw-bold fs-4 mb-2">📱 Mobile App Development</h3>
+                        <p class="text-light">
+                            Build powerful mobile apps for <strong>Android</strong> & <strong>iOS</strong> using
+                            <strong>Flutter</strong>,
+                            <strong>React Native</strong>, or native tools like <strong>Swift</strong> and
+                            <strong>Kotlin</strong>. From idea to app store – I’ve got you covered!
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Call to Action -->
-            <div class="text-center mt-5">
-                <a href="#contact" class="btn btn-primary btn-lg"
-                    style="background-color: #FFD700; color: #0f0f0f; border-radius: 50px; padding: 10px 30px;">
-                    Contact Me for More Info
-                </a>
+                <!-- Desktop App Development -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card p-4 text-center h-100 bg-secondary rounded-4 shadow-sm">
+                        <h3 class="text-warning fw-bold fs-4 mb-2">🖥️ Desktop App Development</h3>
+                        <p class="text-light">
+                            Develop fast, modern desktop applications using <strong>Electron.js</strong>,
+                            <strong>Java</strong>, and
+                            <strong>C++</strong>. I create cross-platform apps for <strong>Windows</strong>,
+                            <strong>macOS</strong>, and <strong>Linux</strong> that look good and work even better.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 </div>
+
+<!-- Style -->
+<style>
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    .service-card {
+        transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        background-color: #3a3a3a;
+    }
+</style>

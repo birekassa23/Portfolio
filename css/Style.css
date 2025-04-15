@@ -1,13 +1,29 @@
 /* style.css */
 
-/* Hero Section Glow */
-.about-box {
-    background: rgba(30, 30, 30, 0.7);
-    backdrop-filter: blur(5px);
-    padding: 20px;
-    border-radius: 15px;
-    border: 1px solid rgba(0, 150, 255, 0.2);
+/* css for index.html
+
+/* Optional Typography Tweaks */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff !important;
+    color: #212529;
 }
+
+body.light-mode {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+body.light-mode section {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+}
+
+body.light-mode .btn-outline-light:hover {
+    background-color: #212529;
+    color: white;
+}
+
 
 /* Reusable Glow Button */
 .btn-glow {
@@ -25,31 +41,6 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-}
-
-/* Optional Typography Tweaks */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffffff !important;
-}
-
-
-body.light-mode {
-    background-color: #f8f9fa;
-    color: #212529;
-}
-
-
-body.light-mode .hero,
-body.light-mode section {
-    background-color: #ffffff !important;
-    color: #212529 !important;
-}
-
-
-body.light-mode .btn-outline-light:hover {
-    background-color: #212529;
-    color: white;
 }
 
 /* Hero Section Glow */
@@ -79,39 +70,7 @@ body.light-mode .btn-outline-light:hover {
     transform: translateY(-2px);
 }
 
-/* Particle Decorations */
-.particle {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: rgba(0, 150, 255, 0.5);
-    animation: particleAnimation 10s infinite;
-}
 
-@keyframes particleAnimation {
-    0% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-
-    50% {
-        transform: translate(50px, 50px);
-        opacity: 0.5;
-    }
-
-    100% {
-        transform: translate(100px, 100px);
-        opacity: 0;
-    }
-}
-
-/* Typography Tweaks */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffffff !important;
-    color: #212529;
-}
 
 body.dark-mode {
     background-color: #212529;
@@ -135,7 +94,8 @@ a:hover {
     color: #0056b3;
 }
 
-/* Button with outline on hover */
+
+/* this is when the theme is white */
 body.light-mode .btn-outline-light:hover {
     background-color: #212529;
     color: white;
@@ -152,11 +112,6 @@ footer .social-links a:hover {
     color: #007bff;
 }
 
-/* Overall Page Styling */
-body {
-    background-color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
 h2,
 h3,
@@ -182,3 +137,10 @@ h4 {
 html {
     scroll-behavior: smooth;
 }
+
+/* css for 404.html*/
+/* css for about.html */
+/* css for contatc.html */
+/* css for projects.html */
+/* css for services.html */
+/* css for technologies.html */
